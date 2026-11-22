@@ -38,7 +38,7 @@ datos/
   resultados_gee/            Resultados numéricos de todas las ejecuciones (CSV)
   tablas_tesis/              Tablas de datos de la tesis en CSV (Tablas 4, 6-13, A.4 y A.5)
 results/
-  VALIDATION_RESULTS.md      Registro original de las salidas de consola de Earth Engine (en inglés)
+  VALIDATION_RESULTS.md      Registro de las salidas de consola de Earth Engine, por cuenca
   panel_*.jpg                Paneles cartográficos de Murray–Darling, el Sinú y el Alto Madre de Dios
 benchmark/                   Valores de referencia del CSIRO (Smith et al., 2025) y enlaces a sus datos
 data/mdb_boundary/           Límite oficial de Murray–Darling (instrucciones de carga en Earth Engine)
@@ -51,7 +51,7 @@ docs/
 python_pipeline/             Implementación en Python con datos SINTÉTICOS (véase python_pipeline/LEEME.md)
 ```
 
-Los archivos en inglés (`results/VALIDATION_RESULTS.md`, `benchmark/`, `python_pipeline/README.md`, `README_REPRODUCIBILITY.md`) proceden del repositorio de trabajo original y se conservan como registro. Su equivalente en español está en `docs/` y en `datos/`.
+Toda la documentación está en español. Algunos comentarios internos del código de los scripts conservan el inglés de la versión de trabajo. El texto de la licencia MIT se mantiene en su versión original en inglés.
 
 ## Las tres cuencas
 
