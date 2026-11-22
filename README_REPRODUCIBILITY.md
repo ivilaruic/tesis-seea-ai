@@ -31,6 +31,6 @@ El script recalcula y comprueba las 59 cifras derivadas de la tesis: escenarios 
 - **Biomasa (NASA/ORNL).** Es una línea base global de 2010 a 300 m, por tanto una aproximación *relativa* y no un inventario anual absoluto. La sensibilidad a ESA CCI 2020 se cuantifica en el epígrafe 5.2.4.7.
 - **Random Forest.** R² = 0,77 con partición aleatoria y 0,76 por bloques espaciales de 1°, con un RMSE de 13,2 tC/ha (≈48,4 tCO₂/ha). Es sólido para contrastes relativos y espaciales y débil como inventario financiero absoluto.
 - **Murray–Darling.** Es un benchmark de coherencia metodológica, no una validación empírica directa de las cuencas tropicales. Las densidades tropicales se contrastan con el IDEAM, con Asner et al. (2010), con ESA CCI y con GEDI (epígrafes 5.2.4.5 y 5.2.4.6).
-- **Exposiciones.** Los 47,4 M USD del Sinú y los 585,7 M USD del Alto Madre de Dios son exposiciones **puntuales** del stock de carbono por deforestación, NO flujos anuales, y por eso no se capitalizan. La sensibilidad del Sinú va de 32,1 a 65,6 M USD.
+- **Exposiciones.** Los 47,4 M USD del Sinú y los 585,7 M USD del Alto Madre de Dios son exposiciones **puntuales** del stock de carbono asociada a la pérdida de cubierta arbórea, NO flujos anuales, y por eso no se capitalizan. La sensibilidad del Sinú va de 32,1 a 65,6 M USD.
 - **Carbono del suelo.** No puede obtenerse con Sentinel; haría falta SoilGrids o SLGA.
 - **Validación de campo.** Está pendiente: los datos de parcela se solicitaron al IDEAM y a RAINFOR sin obtener acceso.
