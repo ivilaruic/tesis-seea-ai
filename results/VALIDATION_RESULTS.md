@@ -87,7 +87,7 @@ Al no ser un flujo anual, la cifra no se capitaliza. Con la densidad de los píx
 > - Frente a ESA CCI 2020 y GEDI L4B queda entre un 3 % y un 12 % por debajo.
 > - El escenario del Alto Madre de Dios se sitúa, por tanto, en la parte alta del rango plausible.
 
-## Lectura económica (Alto Madre de Dios) — epígrafe 5.2.4.3 y Anexo IV (Tabla A.5) de la tesis
+## Lectura económica (Alto Madre de Dios) — epígrafe 5.2.4.3 y Anexo I (Tabla A.2) de la tesis
 La exposición del stock de carbono por deforestación es localizada:
 
 57.141 ha × ≈410 tCO₂/ha ≈ 23,4 MtCO₂ → a 25 USD/tCO₂, ≈ **585,7 millones de USD**.
