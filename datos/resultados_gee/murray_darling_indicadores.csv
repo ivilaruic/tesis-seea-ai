@@ -1,0 +1,11 @@
+variable,valor,unidad,escala,ventana_temporal,fuente,script
+superficie de la cuenca,1059394,km2,,,límite oficial MDBA (Water Act 2007),validation_murray.js
+escenas Sentinel-2,3354,número,,2018-12-01/2019-02-28,COPERNICUS/S2_SR_HARMONIZED,validation_murray.js
+NDVI medio,0.229,índice,500 m,verano 2018-19,Sentinel-2,validation_murray.js
+índice de condición C (H = 0.70),0.274,0-1,500 m,verano 2018-19,Sentinel-2,validation_murray.js
+NDVI Landsat 8,0.277,índice,500 m,verano 2018-19,Landsat 8 (diferencia S2 - Landsat = -0.048),validation_murray.js
+carbono de la biomasa aérea (etiqueta),48.0,tCO2/ha,300 m,2010,NASA/ORNL,validation_murray.js
+producción primaria neta,12.6,tCO2/ha·año,500 m,2018,MODIS MOD17A3HGF,validation_murray.js
+proxy de pérdida de suelo (RUSLE),0.63,t/ha·año,1000 m,año fiscal 2018-19,CHIRPS + SRTM + NDVI,validation_murray.js
+pérdida forestal Hansen,524266,ha,30 m,2018-19,Hansen GFC v1.12,validation_murray.js
+área quemada MODIS,193105,ha,500 m,año fiscal 2018-19,MODIS MCD64A1,validation_murray.js

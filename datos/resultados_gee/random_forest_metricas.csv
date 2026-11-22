@@ -1,0 +1,3 @@
+modelo,n_entrenamiento,n_prueba,particion,predictores,r2_prueba,rmse_tC_ha,rmse_tCO2_ha,media_rf_mdb_tC_ha,media_etiqueta_mdb_tC_ha,script
+MDB + muestras del Sinú,5035,829,aleatoria 70/30 por píxel en Murray-Darling,12 (B2-B12; NDVI; NDWI; NBR; elevación; pendiente; precipitación),0.77,13.2,48.4,14.6,13.1,rf_biomass_mdb_to_sinu.js
+MDB + muestras del Alto Madre de Dios,5225,829,aleatoria 70/30 por píxel en Murray-Darling,12 (receta idéntica),0.77,13.3,48.8,,,rf_biomass_mdb_to_madrededios.js

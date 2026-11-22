@@ -1,0 +1,13 @@
+cuenca,configuracion,descripcion_configuracion,referencia,n,media_referencia_tCO2_ha,media_rf_tCO2_ha,sesgo_pct,rmse_tCO2_ha,r2_1a1,r_pearson
+Sinú,B,MDB + muestras de la propia cuenca (tesis),ESA CCI 2020,3773,169.7,134.2,-21.0,74.2,0.79,0.92
+Sinú,B,MDB + muestras de la propia cuenca (tesis),GEDI L4B,1480,111.2,92.4,-16.9,115.1,0.64,0.83
+Sinú,A,solo MDB (transferencia pura),ESA CCI 2020,3773,169.7,145.2,-14.5,106.6,0.57,0.78
+Sinú,A,solo MDB (transferencia pura),GEDI L4B,1480,111.2,118.4,6.4,140.4,0.47,0.72
+Sinú,C,MDB + Alto Madre de Dios (cuenca retenida),ESA CCI 2020,3773,169.7,198.1,16.7,77.7,0.77,0.90
+Sinú,C,MDB + Alto Madre de Dios (cuenca retenida),GEDI L4B,1480,111.2,153.5,38.0,131.0,0.54,0.77
+Alto Madre de Dios,B,MDB + muestras de la propia cuenca (tesis),ESA CCI 2020,3935,474.3,416.0,-12.3,95.7,0.16,0.70
+Alto Madre de Dios,B,MDB + muestras de la propia cuenca (tesis),GEDI L4B,2119,423.6,411.0,-3.0,146.5,0.22,0.48
+Alto Madre de Dios,A,solo MDB (transferencia pura),ESA CCI 2020,3935,474.3,335.3,-29.3,171.0,-1.69,0.39
+Alto Madre de Dios,A,solo MDB (transferencia pura),GEDI L4B,2119,423.6,334.4,-21.1,183.7,-0.23,0.28
+Alto Madre de Dios,C,MDB + Sinú (cuenca retenida),ESA CCI 2020,3935,474.3,313.8,-33.8,201.6,-2.74,-0.17
+Alto Madre de Dios,C,MDB + Sinú (cuenca retenida),GEDI L4B,2119,423.6,307.8,-27.3,204.9,-0.53,0.08

@@ -1,0 +1,9 @@
+cuenca,fuente,densidad_media_cuenca_2020_tCO2_ha,densidad_pixeles_perdidos_2021_2024_tCO2_ha,superficie_perdida_ha,precio_USD_tCO2,exposicion_con_densidad_pixeles_perdidos_MUSD,nota
+Sinú,módulo Random Forest (B; 2020),128.2,238.0,14580,25,86.8,
+Sinú,ESA CCI 2020,,306.1,14580,25,111.6,
+Sinú,GEDI L4B,111.8,177.1,14580,25,64.6,media de celdas de 1 km que contienen pérdida
+Sinú,escenario base de la tesis,130,,14580,25,47.4,densidad media de cuenca
+Alto Madre de Dios,módulo Random Forest (B; 2020),410.6,379.7,57141,25,542.4,
+Alto Madre de Dios,ESA CCI 2020,,425.8,57141,25,608.2,
+Alto Madre de Dios,GEDI L4B,426.5,350.3,57141,25,500.4,media de celdas de 1 km que contienen pérdida
+Alto Madre de Dios,escenario base de la tesis,410,,57141,25,585.7,densidad media de cuenca

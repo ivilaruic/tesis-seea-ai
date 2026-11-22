@@ -1,0 +1,5 @@
+cuenca,etiqueta,densidad_media_cuenca_tCO2_ha,densidad_pixeles_perdidos_tCO2_ha,sesgo_frente_GEDI_pct,r2_frente_GEDI,r_frente_GEDI,n_GEDI,exposicion_densidad_cuenca_MUSD
+Sinú,NASA/ORNL 2010 (principal),128.2,238.0,-16.9,0.64,0.83,1480,
+Sinú,ESA CCI 2020 (sensibilidad),160.9,286.6,8.1,0.69,0.84,1480,58.7
+Alto Madre de Dios,NASA/ORNL 2010 (principal),410.6,379.7,-3.0,0.22,0.48,2119,
+Alto Madre de Dios,ESA CCI 2020 (sensibilidad),467.4,436.4,11.7,0.11,0.47,2119,667.7
