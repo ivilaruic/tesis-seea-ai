@@ -31,8 +31,8 @@ gee/                         Scripts de Google Earth Engine (JavaScript) que gen
   validation_tropical_ind.js   Comparación con ESA CCI y GEDI; cuencas retenidas (epígrafe 5.2.4.6)
   validation_blocks_label2020.js  Validación por bloques y etiqueta de 2020 (epígrafe 5.2.4.7)
 calculos/
-  verificar_cifras_tesis.py  Recalcula las 53 cifras derivadas de la tesis (escenarios, contrastes, conversiones) y las compara con el texto
-  verificacion_cifras.csv    Resultado de la verificación (53 de 53 coinciden)
+  verificar_cifras_tesis.py  Recalcula las 59 cifras derivadas de la tesis (escenarios, contrastes, conversiones) y las compara con el texto
+  verificacion_cifras.csv    Resultado de la verificación (59 de 59 coinciden)
   figuras_tesis.py           Genera las Figuras 8 y 9 de la tesis a partir de los CSV
 datos/
   fuentes_datos.csv          Las 21 fuentes de datos: identificador, versión, resolución, periodo, uso y DOI
@@ -40,7 +40,7 @@ datos/
   tablas_tesis/              Tablas de datos de la tesis en CSV (Tablas 4, 6-13, A.1 y A.2)
 results/
   VALIDATION_RESULTS.md      Registro de las salidas de consola de Earth Engine, por cuenca
-  panel_*.jpg                Paneles cartográficos de Murray–Darling, el Sinú y el Alto Madre de Dios (Figuras 2–7 y A.1–A.3)
+  panel_*.jpg                Paneles cartográficos de Murray–Darling, el Sinú y el Alto Madre de Dios (Figuras 2–7 y A.1)
   fig8_*.png, fig9_*.png     Gráficos de validación y de exposiciones (Figuras 8 y 9)
 benchmark/                   Valores de referencia del CSIRO (Smith et al., 2025) y enlaces a sus datos
 data/mdb_boundary/           Límite oficial de Murray–Darling (instrucciones de carga en Earth Engine)
