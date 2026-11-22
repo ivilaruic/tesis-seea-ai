@@ -1,6 +1,6 @@
-"""SEEA-EA accounting layer: extent, condition, physical & monetary flows, assets.
+"""Capa contable SEEA-EA: extensión, condición, flujos físicos y monetarios, activos.
 
-Implements the stock-flow-value chain formalised in the manuscript:
+Implementa la cadena stock-flujo-valor formalizada en la tesis (capítulo 4):
   X (EO inputs) -> theta (biophysical) -> SE_j (physical flows) -> V (monetary)
   K_phys = E * g(C);  K_t = sum_j V_j ;  dK = K_t - K_{t-1}
 """
