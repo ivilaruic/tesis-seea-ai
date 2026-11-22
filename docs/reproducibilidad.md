@@ -11,7 +11,7 @@
 |---|---|
 | Random Forest | `ee.Classifier.smileRandomForest(200)`, modo regresión, sin búsqueda de hiperparámetros |
 | Predictores (12) | B2, B3, B4, B8, B11, B12, NDVI, NDWI, NBR, elevación, pendiente, precipitación |
-| Máscara de nubes | Cloud Score+ `cs_cdf ≥ 0,6`; escenas con menos del 60 % de nubes |
+| Máscara de nubes | Cloud Score+ `cs_cdf ≥ 0,6`; escenas filtradas por CLOUDY_PIXEL_PERCENTAGE según el script: 40 % (validation_murray.js), 60 % (rf_biomass_*, validation_blocks_label2020.js, validation_tropical_ind.js), 70 % (validation_sinu.js, validation_madre_de_dios.js) y 80 % (sinu_change_2020_2024.js) |
 | Etiqueta principal | NASA/ORNL `agb` (tC/ha, año 2010) |
 | Muestreo de entrenamiento | 3.000 píxeles a 1 km por cuenca; semillas 42 (Murray–Darling), 7 (Sinú) y 11 (Alto Madre de Dios) |
 | Partición de prueba en Murray–Darling | 70/30 aleatoria (`randomColumn`, semilla 42) |
