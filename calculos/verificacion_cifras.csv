@@ -1,0 +1,42 @@
+id,descripcion,calculado,publicado,tolerancia,coincide,ubicacion_tesis
+S1,"Sinú, escenario conservador (110 tCO2/ha, 20 USD)",32.076,32.1,0.05,True,Tabla 8
+S2,"Sinú, escenario base (130 tCO2/ha, 25 USD)",47.385,47.4,0.05,True,Tabla 8
+S3,"Sinú, escenario alto (150 tCO2/ha, 30 USD)",65.61,65.6,0.05,True,Tabla 8
+S4,"Sinú, base con lambda_R = 0,30",14.216,14.2,0.1,True,Resumen; 5.2.4
+S5,"Sinú, stock expuesto (MtCO2)",1.895,1.9,0.01,True,results/VALIDATION_RESULTS.md; 5.2.4
+M1,"AMdD, escenario conservador (390, 20 USD)",445.7,445.7,0.05,True,Tabla A.5
+M2,"AMdD, escenario base (410, 25 USD)",585.695,585.7,0.05,True,Tabla A.5; 5.2.4.3
+M3,"AMdD, escenario alto (430, 30 USD)",737.119,737.1,0.05,True,Tabla A.5
+M4,"AMdD, base con lambda_R = 0,30",175.709,175.7,0.05,True,Anexo IV
+M5,"AMdD, base con lambda_R = 0,60",351.417,351.4,0.05,True,Anexo IV
+M6,"AMdD, stock expuesto (MtCO2)",23.428,23.4,0.05,True,Anexo IV
+I1,IDEAM: densidad oficial (tCO2/ha),142.047,142.0,0.05,True,5.2.4.5
+I2,IDEAM: límite inferior IC95 (tCO2/ha),109.132,109.1,0.1,True,5.2.4.5
+I3,IDEAM: límite superior IC95 (tCO2/ha),174.962,175.0,0.1,True,5.2.4.5
+I4,Desviación RF (132) frente a IDEAM (%),-7.073,-7.1,0.05,True,5.2.4.5
+I5,Exposición con densidad IDEAM (M USD),51.776,51.8,0.05,True,5.2.4.5
+I6,"Exposición IDEAM, IC inferior",39.779,39.8,0.1,True,5.2.4.5
+I7,"Exposición IDEAM, IC superior",63.774,63.8,0.1,True,5.2.4.5
+A1,Asner: densidad media (MgC/ha),91.86,91.9,0.05,True,5.2.4.5
+A2,Asner: densidad media (tCO2/ha),336.822,336.8,0.05,True,5.2.4.5
+A3,"Desviación RF (111,8 MgC/ha) frente a Asner (%)",21.706,21.7,0.05,True,5.2.4.5
+A4,Exposición con densidad Asner (M USD),481.158,481.2,0.05,True,5.2.4.5
+P1,Exposición con densidad de píxeles perdidos 177.12 tCO2/ha,64.56,64.6,0.05,True,5.2.4.6
+P2,Exposición con densidad de píxeles perdidos 306.08 tCO2/ha,111.566,111.6,0.05,True,5.2.4.6
+P3,Exposición con densidad de píxeles perdidos 238.041 tCO2/ha,86.766,86.8,0.05,True,5.2.4.6
+P4,Exposición con densidad de píxeles perdidos 350.326 tCO2/ha,500.449,500.4,0.05,True,5.2.4.6
+P5,Exposición con densidad de píxeles perdidos 425.774 tCO2/ha,608.229,608.2,0.05,True,5.2.4.6
+P6,Exposición con densidad de píxeles perdidos 379.7 tCO2/ha,542.411,542.4,0.05,True,5.2.4.6
+E1,"Sinú, exposición con etiqueta CCI 2020 (160,94 tCO2/ha)",58.663,58.7,0.05,True,5.2.4.7
+E2,"AMdD, exposición con etiqueta CCI 2020 (467,435 tCO2/ha)",667.743,667.7,0.05,True,5.2.4.7
+E3,"Sinú, cambio de densidad con etiqueta 2020 (%)",25.538,25.5,0.1,True,5.2.4.7
+E4,"AMdD, cambio de densidad con etiqueta 2020 (%)",13.842,13.8,0.1,True,5.2.4.7
+R1,"RMSE 13,2 tC/ha en tCO2/ha",48.4,48.4,0.05,True,5.2.3.1
+R2,"RMSE 13,3 tC/ha en tCO2/ha",48.767,48.8,0.05,True,Anexo IV
+R3,"Densidad AMdD 409,8 tCO2/ha en MgC/ha",111.764,111.8,0.05,True,5.2.4.5
+R4,Cociente de áreas AMdD/Sinú,3.919,3.9,0.05,True,Anexo IV
+R5,Cociente de densidades AMdD/Sinú,3.154,3.2,0.05,True,Anexo IV
+B1,Secuestro CSIRO por ha (tCO2/ha·año),9.943,9.9,0.05,True,5.2.6; benchmark
+B2,Stock CSIRO por ha (tCO2/ha),346.302,346,0.5,True,5.2.6; benchmark
+B3,Retención de sedimentos CSIRO por ha (t/ha·año),0.469,0.47,0.005,True,5.2.6; benchmark
+B4,NPP SEEA-AI frente a CSIRO (%),26.717,27,0.5,True,results/BENCHMARK
