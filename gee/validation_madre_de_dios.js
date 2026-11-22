@@ -126,7 +126,8 @@ meanBand(R.multiply(0.03).multiply(LS).multiply(Cf).rename('A'), 'A', 1000,
 
 // 5) DISTURBANCE — Hansen + RADD + MODIS Burned (2020-2024)
 // Note: in Madre de Dios the dominant disturbance signal is NOT fire/grazing
-// but artisanal gold mining (bare soil/ponds, a spectral signature very
+// but forest-cover loss, a lower-bound share of which carries the spectral
+// signature of artisanal gold mining (bare soil/ponds, a spectral signature very
 // different from the Sinú).
 var gfc = ee.Image('UMD/hansen/global_forest_change_2024_v1_12');
 var hansen = gfc.select('lossyear').gte(20).and(gfc.select('lossyear').lte(24)).clip(aoi);

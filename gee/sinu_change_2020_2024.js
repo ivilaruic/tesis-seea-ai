@@ -135,7 +135,7 @@ areaHa(hansenLoss, 'HansenLoss_ha_2020_2024', 30);
 meanValue(dNDVI.updateMask(hansenLoss), 'S2_dNDVI_over_HansenLoss');  // expect strongly negative
 
 // =====================================================
-// 4) VERIFY C — GFW / RADD DEFORESTATION ALERTS (Sentinel-1 radar)
+// 4) VERIFY C — GFW / RADD FOREST DISTURBANCE ALERTS (Sentinel-1 radar)
 // =====================================================
 // RADD (Wageningen, surfaced on Global Forest Watch). 'Date' band = yyDOY;
 // 'Alert' = 2 (unconfirmed) / 3 (confirmed). South America coverage from ~2020.
