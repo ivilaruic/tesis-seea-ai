@@ -4,5 +4,5 @@ Indicador C (verdor),"0,642","0,714",Sentinel-2
 Biomasa aérea de carbono (tCO₂/ha),132,140,Random Forest
 NDVI (verificación),—,"0,655",Landsat 8
 Pérdida de cubierta arbórea (ha),—,14.580,Hansen GFC
-Alertas de perturbación forestal (ha),—,5.605,RADD/GFW
+"Alertas de perturbación forestal confirmadas (RADD, Alert = 3; ha)",—,5.605,RADD/GFW
 Área quemada (ha),—,3.246,MODIS

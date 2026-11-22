@@ -7,7 +7,7 @@ E_t,Extensión ponderada por condición,ha equivalentes,Implementado como indica
 Y^E_t,Flujo monetario de servicios,moneda/periodo,Escenario/contabilidad,ΣpS
 V_t,Valor del activo ecosistémico,moneda,Conceptual/valor presente,Flujos esperados descontados
 K^N_t,Activo natural monetario macro,moneda,Extensión conceptual,No observado directamente
-Ω_t,Productividad total de los factores,adimensional,Extensión conceptual,Función macroeconómica
+Ω_t,Productividad total de los factores,"escalar positivo (adimensional si los factores se expresan como índices)",Extensión conceptual,Función macroeconómica
 "γ_N, η_P",Elasticidad natural y sensibilidad a presión,parámetros,No estimados,Agenda econométrica futura
 λ_R,Fracción de carbono liberada,"[0,1]",Supuesto de escenario,Análisis de sensibilidad
 p_C,Precio ilustrativo del carbono,USD/tCO₂,Supuesto de escenario,Referencia declarada
