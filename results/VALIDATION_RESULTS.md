@@ -10,12 +10,12 @@ Este archivo recoge las salidas de consola de los scripts de `gee/` que sustenta
 | Superficie de la cuenca | 1.059.394 | km² | — | — | MDBA, Water Act 2007 |
 | Escenas Sentinel-2 | 3.354 | número | — | 2018-12-01 / 2019-02-28 | S2_SR_HARMONIZED |
 | NDVI medio | 0,229 | – | 500 m | verano 2018-19 | Sentinel-2 |
-| Índice de condición C | 0,274 | 0–1 | 500 m | verano 2018-19 | Sentinel-2 (referencia H = 0,70) |
+| Indicador de condición C (verdor) | 0,274 | 0–1 | 500 m | verano 2018-19 | Sentinel-2 (referencia H = 0,70) |
 | NDVI Landsat | 0,277 | – | 500 m | verano 2018-19 | Landsat 8 (diferencia S2 − Landsat = −0,048) |
 | Carbono de la biomasa aérea | 48,0 | tCO₂/ha | 300 m | línea base 2010 | NASA/ORNL |
 | Producción primaria neta | 12,6 | tCO₂/ha·año | 500 m | 2018 | MODIS MOD17A3HGF |
-| Proxy de pérdida de suelo (RUSLE) | 0,63 | t/ha·año | 1000 m | año fiscal 2018-19 | CHIRPS + SRTM + NDVI |
-| Pérdida forestal Hansen | 524.266 | ha | 30 m | 2018-19 | UMD Hansen GFC v1.12 |
+| Proxy de pérdida de suelo (RUSLE) | 0,63 | t/ha·año | 300 m | año fiscal 2018-19 | CHIRPS + SRTM + NDVI |
+| Pérdida de cubierta arbórea Hansen | 524.266 | ha | 300 m | 2018-19 | UMD Hansen GFC v1.12 |
 | Área quemada MODIS | 193.105 | ha | 500 m | año fiscal 2018-19 | MCD64A1 |
 
 ## Random Forest — `rf_biomass_mdb_to_sinu.js` (etiqueta: NASA/ORNL `agb`, 2010, 300 m)
@@ -33,17 +33,17 @@ Este archivo recoge las salidas de consola de los scripts de `gee/` que sustenta
 | Variable | Valor | Unidad | Escala | Ventana temporal | Fuente |
 |---|---|---|---|---|---|
 | Superficie de la cuenca | 14.065 | km² | — | — | HydroSHEDS `hybas_7`, `MAIN_BAS` |
-| NDVI 2020 / 2024 | 0,563 / 0,622 | – | 300 m | estación seca 2019-20 / 2023-24 | Sentinel-2 |
-| Índice de condición C 2020 / 2024 | 0,642 / 0,714 | 0–1 | 300 m | estación seca | Sentinel-2 (referencia H = 0,85) |
-| NDVI Landsat 2024 | 0,655 | – | 500 m | estación seca 2023-24 | Landsat 8 (diferencia = −0,033) |
+| NDVI 2020 / 2024 | 0,563 / 0,622 | – | 300 m | ventanas dic–mar 2019-20 / 2023-24 | Sentinel-2 |
+| Indicador de condición C (verdor) 2020 / 2024 | 0,642 / 0,714 | 0–1 | 300 m | ventanas dic–mar | Sentinel-2 (referencia H = 0,85) |
+| NDVI Landsat 2024 | 0,655 | – | 500 m | dic 2023–mar 2024 | Landsat 8 (diferencia = −0,033) |
 | Producción primaria neta 2020 / 2023 | 23,2 / 20,8 | tCO₂/ha·año | 500 m | anual | MODIS MOD17A3HGF |
 | Proxy de pérdida de suelo | 0,45 | t/ha·año | 1000 m | 2023-24 | CHIRPS + SRTM + NDVI |
-| Pérdida forestal Hansen | 14.580 | ha | 30 m | 2020-2024 | UMD Hansen GFC v1.12 |
+| Pérdida de cubierta arbórea Hansen | 14.580 | ha | 30 m | 2020-2024 | UMD Hansen GFC v1.12 |
 | Alertas RADD | 5.605 | ha | 30 m | 2020-2024 | WUR RADD (Sentinel-1) |
 | Área quemada MODIS | 3.246 | ha | 500 m | 2020-2024 | MCD64A1 |
 
 ## Lectura económica (Sinú) — epígrafe 5.2.4 y Tabla 8 de la tesis
-En la cuenca hay un reverdecimiento neto (ΔNDVI +0,058, calculado con valores sin redondear; ΔC +0,072, es decir, +11,2 %; ΔAGB +8,9 tCO₂/ha) que convive con pérdidas forestales localizadas. La exposición bruta del stock de carbono en las zonas deforestadas es **puntual**:
+En la cuenca hay un aumento neto de verdor (ΔNDVI +0,058, calculado con valores sin redondear; ΔC +0,072, es decir, +11,2 %; ΔAGB +8,9 tCO₂/ha) que convive con pérdidas localizadas de cubierta arbórea. La exposición bruta del stock de carbono en los píxeles con pérdida de cubierta arbórea es **puntual**:
 
 14.580 ha × ≈130 tCO₂/ha ≈ 1,90 MtCO₂ → a 25 USD/tCO₂, ≈ **47,4 millones de USD**.
 
@@ -58,11 +58,11 @@ Al no ser un flujo anual, la cifra no se capitaliza. Con la densidad de los píx
 | Variable | Valor | Unidad | Escala | Ventana temporal | Fuente |
 |---|---|---|---|---|---|
 | Superficie de la cuenca | 35.183,22 | km² | — | — | HydroSHEDS `hybas_8`, prefijo de `PFAF_ID` (PREFIX_LEN = 7) |
-| Pérdida forestal Hansen | 57.141 | ha | 30–100 m | 2020-2024 | UMD Hansen GFC v1.12 |
+| Pérdida de cubierta arbórea Hansen | 57.141 | ha | 100 m | 2020-2024 | UMD Hansen GFC v1.12 |
 | Alertas RADD | 148.930,05 | ha | 100 m | 2020-2024 | WUR RADD (Sentinel-1) |
 | NDVI 2020 / 2024 | 0,773 / 0,792 | – | 300 m | estación seca jun.-sep. 2020 / 2023 | Sentinel-2 |
-| Índice de condición C 2020 / 2024 | 0,904 / 0,926 | 0–1 | 300 m | estación seca | Sentinel-2 (referencia H = 0,85) |
-| NDVI Landsat 2024 | 0,813 | – | 500 m | estación seca 2023-24 | Landsat 8 (diferencia S2 − Landsat = −0,021) |
+| Indicador de condición C (verdor) 2020 / 2024 | 0,904 / 0,926 | 0–1 | 300 m | jun–sep 2020 / 2023 | Sentinel-2 (referencia H = 0,85) |
+| NDVI Landsat 2024 | 0,813 | – | 500 m | jun–sep 2023 | Landsat 8 (diferencia S2 − Landsat = −0,021) |
 | Producción primaria neta 2020 / 2023 | 48,8 / 49,6 | tCO₂/ha·año | 500 m | anual | MODIS MOD17A3HGF |
 | Proxy de pérdida de suelo | 0,32 | t/ha·año | 1000 m | 2022-23 | CHIRPS + SRTM + NDVI |
 | Área quemada MODIS | 2.757 | ha | 500 m | 2020-2024 | MCD64A1 |
@@ -70,7 +70,7 @@ Al no ser un flujo anual, la cifra no se capitaliza. Con la densidad de los píx
 
 > **Nota sobre la delimitación.** El Sinú es una cuenca costera independiente y se selecciona bien con `MAIN_BAS` de HydroBASINS. El Alto Madre de Dios, en cambio, es un afluente amazónico, y `MAIN_BAS` arrastra toda la red amazónica aguas arriba (unos 5,9 millones de km² en la primera ejecución). Por eso se delimita por coincidencia de prefijo del código Pfafstetter (`PFAF_ID`) en el nivel más fino `hybas_8`. El ajuste de `PREFIX_LEN` está documentado en los comentarios `FIX` de los scripts: con 6 dígitos salen 125.554 km² y con 7, 35.183 km², que es el valor adoptado.
 
-> La pérdida con firma minera (1.371 ha) es una fracción pequeña de la pérdida Hansen total (57.141 ha). La mayor parte de la pérdida detectada corresponde, por tanto, a tala y a cambio de uso del suelo, y no es por sí sola evidencia de la extensión de la minería aurífera.
+> La pérdida con firma minera (1.371 ha) es una fracción pequeña de la pérdida Hansen total (57.141 ha) y debe leerse como una cota inferior de la superficie minera: el filtro espectral omite pozas inundadas, zonas en regeneración y minería bajo dosel. El resto de la pérdida no puede atribuirse a una causa concreta sin un análisis de impulsores.
 
 ## Random Forest — `rf_biomass_mdb_to_madrededios.js` (etiqueta: NASA/ORNL `agb`, 2010, 300 m)
 | Variable | Valor | Unidad | Notas |
@@ -88,7 +88,7 @@ Al no ser un flujo anual, la cifra no se capitaliza. Con la densidad de los píx
 > - El escenario del Alto Madre de Dios se sitúa, por tanto, en la parte alta del rango plausible.
 
 ## Lectura económica (Alto Madre de Dios) — epígrafe 5.2.4.3 y Anexo I (Tabla A.2) de la tesis
-La exposición del stock de carbono por deforestación es localizada:
+La exposición del stock de carbono asociada a la pérdida de cubierta arbórea es localizada:
 
 57.141 ha × ≈410 tCO₂/ha ≈ 23,4 MtCO₂ → a 25 USD/tCO₂, ≈ **585,7 millones de USD**.
 
