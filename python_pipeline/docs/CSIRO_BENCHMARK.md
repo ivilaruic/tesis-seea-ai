@@ -1,27 +1,21 @@
-# Structural validation against the CSIRO Murray–Darling Basin accounts
+# Correspondencia estructural con las cuentas del CSIRO para la cuenca Murray–Darling
 
-Source: CSIRO, *Experimental ecosystem accounts for the Murray–Darling Basin*
-(last updated 7 Feb 2025), funded by the Australian Government DCCEEW under the
-*Environmental Economic Accounting: A common national approach*.
-<https://www.csiro.au/en/research/natural-environment/natural-resources/Natural-capital-accounting/Murray-Darling-Basin>
+**Fuente.** CSIRO, *Experimental ecosystem accounts for the Murray–Darling Basin* (actualizado el 7 de febrero de 2025), financiado por el DCCEEW del Gobierno de Australia dentro de *Environmental Economic Accounting: A common national approach*: <https://www.csiro.au/en/research/natural-environment/natural-resources/Natural-capital-accounting/Murray-Darling-Basin>
 
-The benchmark is used as a **structural** reference (account architecture,
-condition convention, service set), not for direct transfer of monetary values
-— consistent with the manuscript.
+El benchmark se usa como **referencia estructural** (arquitectura de cuentas, convención de condición y conjunto de servicios), no para trasladar valores monetarios. Es el mismo criterio que sigue la tesis (epígrafe 5.2.6).
 
-| Dimension | CSIRO MDB accounts | SEEA-AI (this work) | Correspondence |
+| Dimensión | Cuentas del CSIRO (MDB) | SEEA-AI | Correspondencia |
 |---|---|---|---|
-| Condition metric | Index 0–1 (1 = high integrity) | C∈[0,1] from NDVI normalisation | ✔ same convention |
-| Accounts compiled | extent, condition, biodiversity, services | extent, condition, physical & monetary flows, assets | ✔ |
-| Services | carbon storage/seq., water & sediment retention, biomass, recreation | carbon, sediment retention (extensible) | ✔ subset |
-| Spatial unit | basin / ecosystem type | gridded bbox aggregated to territory | ✔ |
-| Temporal | annual financial-year accounts | annual epochs (2020, 2024) | ✔ |
-| Biodiversity trend (MDB) | plant persistence 86.8%→87.1% (2010–15) | not modelled (out of scope) | n/a |
+| Métrica de condición | índice 0–1 (1 = integridad alta) | C∈[0,1] por normalización del NDVI | misma convención |
+| Cuentas elaboradas | extensión, condición, biodiversidad, servicios | extensión, condición, flujos físicos y monetarios, activos | ✔ |
+| Servicios | stock y secuestro de carbono, retención de agua y sedimentos, biomasa, recreación | carbono, retención de sedimentos (ampliable) | subconjunto |
+| Unidad espacial | cuenca / tipo de ecosistema | rejilla agregada a territorio | ✔ |
+| Temporalidad | cuentas anuales por año fiscal | épocas anuales (2020, 2024) | ✔ |
+| Tendencia de biodiversidad (MDB) | persistencia vegetal 86,8 % → 87,1 % (2010–15) | no se modeliza (fuera de alcance) | n/a |
 
-**Validation logic.** SEEA-AI must (i) reproduce the *functional* relationship
-condition → service flow → value, (ii) keep estimated values within the order of
-magnitude expected for landscapes of comparable extent and condition, and
-(iii) preserve the SEEA-EA accounting identities (assets = NPV of flows; ΔK as
-depreciation/accumulation). The Murrumbidgee run is the calibration anchor; the
-two application sites (Rio_Sinu, Alto_Madre_de_Dios) test generalisation
-without site-specific recalibration.
+**Lógica de la comparación.** SEEA-AI debe:
+- reproducir la relación *funcional* condición → flujo de servicio → valor;
+- mantener los valores estimados en el orden de magnitud esperable para paisajes de extensión y condición comparables;
+- respetar las identidades contables del SEEA-EA (activo = valor presente de los flujos; ΔK como depreciación o acumulación).
+
+En esta demostración sintética, Murrumbidgee actúa como ancla de calibración. En la tesis, las aplicaciones tropicales **sí** incorporan recalibración contextual con muestras de cada cuenca. La prueba con cuencas retenidas (epígrafe 5.2.4.6) muestra que el modelo no se transfiere sin esa recalibración.
