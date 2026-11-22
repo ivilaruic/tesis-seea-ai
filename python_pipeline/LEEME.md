@@ -1,6 +1,6 @@
 # Demostración sintética (Python)
 
-> **Aviso:** esta carpeta contiene una implementación de demostración que funciona con **datos sintéticos deterministas** (`source = offline_sample`). Sus cifras **no son resultados empíricos de la tesis** y no deben citarse como tales. Los resultados empíricos proceden de los scripts de `gee/` (raíz del repositorio) y están en `datos/resultados_gee/`. Los textos en inglés de esta carpeta (README.md) pertenecen al repositorio de trabajo original.
+> **Aviso:** esta carpeta contiene una implementación de demostración que funciona con **datos sintéticos deterministas** (`source = offline_sample`). Sus cifras **no son resultados empíricos de la tesis** y no deben citarse como tales. Los resultados empíricos proceden de los scripts de `gee/` (raíz del repositorio) y están en `datos/resultados_gee/`.
 
 ## Para qué sirve
 - Ilustra la cadena contable de la tesis (capítulo 4): extensión → condición → flujos físicos → flujos monetarios → activo.
