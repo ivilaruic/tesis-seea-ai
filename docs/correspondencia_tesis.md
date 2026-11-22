@@ -12,7 +12,7 @@ Para cada resultado cuantitativo de la tesis se indica:
 | Tabla 6 | Correspondencia entre observación de la Tierra, variables biofísicas y conceptos SEEA-EA | — | `datos/tablas_tesis/tabla_6.csv` |
 | 5.2.4, Tabla 7 | Indicadores de vegetación y perturbación del Sinú 2020–2024 | `validation_sinu.js`, `sinu_change_2020_2024.js` | `datos/resultados_gee/sinu_indicadores.csv`, `datos/tablas_tesis/tabla_7.csv` |
 | 5.2.4, Tabla 8 | Escenarios de exposición del stock de carbono del Sinú | `rf_biomass_mdb_to_sinu.js` (densidad) | `datos/tablas_tesis/tabla_8.csv` |
-| 5.2.6, Tabla 9 | Comparación con cuentas oficiales y benchmark de Murray–Darling | `validation_murray.js` | `datos/resultados_gee/murray_darling_indicadores.csv`, `benchmark_murray_darling.csv`, `datos/tablas_tesis/tabla_9.csv` |
+| 5.2.4 (benchmark), Figura 2; 5.2.6, Tabla 9 (comparación cualitativa) | Benchmark de Murray–Darling y comparación con cuentas oficiales | `validation_murray.js` | `datos/resultados_gee/murray_darling_indicadores.csv`, `benchmark_murray_darling.csv`, `datos/tablas_tesis/tabla_9.csv` |
 | 5.2.4.3, Tabla 10 | Indicadores del Alto Madre de Dios | `validation_madre_de_dios.js` | `datos/resultados_gee/madre_de_dios_indicadores.csv`, `datos/tablas_tesis/tabla_10.csv` |
 | 5.2.4.5 | Contraste con el IFN del IDEAM (142,0 tCO₂/ha) y con Asner et al. (2010) (336,8 tCO₂/ha) | — (fuentes externas) | `datos/fuentes_datos.csv` |
 | 5.2.4.6, Tabla 11 | Comparación con ESA CCI y GEDI L4B; configuraciones A, B y C; densidad en píxeles perdidos | `validation_tropical_ind.js` | `datos/resultados_gee/comparacion_productos_referencia.csv`, `densidad_pixeles_perdidos.csv`, `datos/tablas_tesis/tabla_11.csv` |
