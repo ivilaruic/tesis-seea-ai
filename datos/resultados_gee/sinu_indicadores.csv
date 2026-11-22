@@ -1,11 +1,11 @@
 variable,valor_2020,valor_2024,unidad,escala,fuente,script
 superficie de la cuenca,14065,14065,km2,,HydroSHEDS hybas_7 (MAIN_BAS),validation_sinu.js
-NDVI medio,0.563,0.622,índice,300 m,Sentinel-2 (estación seca 2019-20 y 2023-24),validation_sinu.js
-índice de condición C (L = 0.05; H = 0.85),0.642,0.714,0-1,300 m,Sentinel-2,validation_sinu.js
+NDVI medio,0.563,0.622,índice,300 m,Sentinel-2 (ventanas dic–mar 2019-20 y 2023-24),validation_sinu.js
+indicador de condición C (L = 0.05; H = 0.85),0.642,0.714,0-1,300 m,Sentinel-2,validation_sinu.js
 NDVI Landsat 8,,0.655,índice,500 m,Landsat 8 (diferencia S2 - Landsat = -0.033),validation_sinu.js
 producción primaria neta (2020 y 2023),23.2,20.8,tCO2/ha·año,500 m,MODIS MOD17A3HGF,validation_sinu.js
 proxy de pérdida de suelo (RUSLE),,0.45,t/ha·año,1000 m,CHIRPS + SRTM + NDVI,validation_sinu.js
-pérdida forestal Hansen 2020-2024,,14580,ha,30 m,Hansen GFC v1.12,validation_sinu.js
+pérdida de cubierta arbórea Hansen 2020-2024,,14580,ha,30 m,Hansen GFC v1.12,validation_sinu.js
 alertas RADD 2020-2024,,5605,ha,30 m,WUR RADD (Sentinel-1),validation_sinu.js
 área quemada MODIS 2020-2024,,3246,ha,500 m,MODIS MCD64A1,validation_sinu.js
 densidad de carbono de la biomasa aérea (Random Forest),132.3,139.7,tCO2/ha,500 m,módulo Random Forest (configuración B),rf_biomass_mdb_to_sinu.js
