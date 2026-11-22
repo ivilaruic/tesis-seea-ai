@@ -4,7 +4,7 @@
 // Qué hace: Río Sinú 2020-2024: cuenta completa (NDVI, condición C, NPP, RUSLE, Hansen, RADD, MODIS).
 // Dónde se usa en la tesis: Epígrafe 5.2.4; Tablas 7 y 8; datos/resultados_gee/sinu_indicadores.csv
 // Ejecución: Google Earth Engine Code Editor (code.earthengine.google.com).
-// Activo requerido: projects/seea-ai/assets/mdb_boundary (véase docs/limite_murray_darling.md).
+// Activo requerido: ninguno (las cuencas se delimitan con HydroSHEDS/HydroBASINS).
 // Los comentarios internos del código pueden estar en inglés (versión de trabajo original).
 // =====================================================================
 // =====================================================

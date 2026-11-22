@@ -4,7 +4,7 @@
 // Qué hace: Alto Madre de Dios 2020-2024: cuenta completa (área por prefijo Pfafstetter en hybas_8).
 // Dónde se usa en la tesis: Epígrafe 5.2.4.3; Tabla 10; Anexo I; datos/resultados_gee/madre_de_dios_indicadores.csv
 // Ejecución: Google Earth Engine Code Editor (code.earthengine.google.com).
-// Activo requerido: projects/seea-ai/assets/mdb_boundary (véase docs/limite_murray_darling.md).
+// Activo requerido: ninguno (las cuencas se delimitan con HydroSHEDS/HydroBASINS).
 // Los comentarios internos del código pueden estar en inglés (versión de trabajo original).
 // =====================================================================
 // =====================================================
@@ -16,22 +16,22 @@
 //   - Amazonian DRY-SEASON window = Jun-Sep (NOT Dec-Mar like the Caribbean
 //     Sinú) — VERIFY against your own clean-composite criteria
 // PRIMARY: Sentinel-2 SR | VERIFY: Landsat 8 + Hansen + RADD + MODIS Burned
-// Carbon (AGB tCO2/ha): paste in the result printed by rf_madre_de_dios.js
+// Carbon (AGB tCO2/ha): paste in the result printed by rf_biomass_mdb_to_madrededios.js
 // (RF_AGB_MdD_2020_tCO2_ha, RF_AGB_MdD_2024_tCO2_ha) once you run it.
 // =====================================================
 
-// 0) AOI — same basin used in rf_madre_de_dios.js (Pfafstetter prefix match)
+// 0) AOI — same basin used in rf_biomass_mdb_to_madrededios.js (Pfafstetter prefix match)
 // FIX (post first run): MAIN_BAS groups ALL sub-basins draining to the same
 // terminal outlet. Madre de Dios is a tributary of the Amazon mainstem, so
 // MAIN_BAS pulled in the entire upstream Amazon network (~5.9M km2 on the
 // first run) and every reduceRegion() below timed out. Use the same
-// PFAF_ID-prefix selection on hybas_8 as rf_madre_de_dios.js instead — copy
+// PFAF_ID-prefix selection on hybas_8 as rf_biomass_mdb_to_madrededios.js instead — copy
 // the same PREFIX_LEN value you settled on there.
 var hb8 = ee.FeatureCollection('WWF/HydroSHEDS/v1/Basins/hybas_8')
   .map(function (f) { return f.set('PFAF_STR', ee.Number(f.get('PFAF_ID')).format()); });
 var seed = ee.Feature(hb8.filterBounds(ee.Geometry.Point([-71.0, -12.8])).first());
 var seedPfaf = ee.String(seed.get('PFAF_STR'));
-var PREFIX_LEN = 7;   // matches rf_madre_de_dios.js run 2 (run 1 @ 6 gave 125,554 km2)
+var PREFIX_LEN = 7;   // matches rf_biomass_mdb_to_madrededios.js run 2 (run 1 @ 6 gave 125,554 km2)
 var seedPrefix = seedPfaf.slice(0, PREFIX_LEN);
 var mdd = hb8.filter(ee.Filter.stringStartsWith('PFAF_STR', seedPrefix));
 var aoi = mdd.geometry();
@@ -163,8 +163,8 @@ Map.addLayer(miningSignature.selfMask(), {palette: ['yellow']},
   'Loss with likely mining signature (high SWIR + low NDVI)', false);
 areaHa(miningSignature, 100, 'MiningLikeLoss_ha_2020_2024');
 
-print('NOTE — paste here the carbon stock (AGB) from rf_madre_de_dios.js once ' +
-      'run: RF_AGB_MdD_2020_tCO2_ha ~= ???, RF_AGB_MdD_2024_tCO2_ha ~= ???.');
+print('NOTE — paste here the carbon stock (AGB) from rf_biomass_mdb_to_madrededios.js once ' +
+      'run: RF_AGB_MdD_2020_tCO2_ha ~= 409.8, RF_AGB_MdD_2024_tCO2_ha ~= 414.0.');
 
 // 6) EXPORTS
 // FIX (post first run): S2_RGB and Condition at scale=10 over ~35,183 km2
