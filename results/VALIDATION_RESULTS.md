@@ -39,7 +39,7 @@ Este archivo recoge las salidas de consola de los scripts de `gee/` que sustenta
 | Producción primaria neta 2020 / 2023 | 23,2 / 20,8 | tCO₂/ha·año | 500 m | anual | MODIS MOD17A3HGF |
 | Proxy de pérdida de suelo | 0,45 | t/ha·año | 1000 m | 2023-24 | CHIRPS + SRTM + NDVI |
 | Pérdida de cubierta arbórea Hansen | 14.580 | ha | 30 m | 2020-2024 | UMD Hansen GFC v1.12 |
-| Alertas RADD | 5.605 | ha | 30 m | 2020-2024 | WUR RADD (Sentinel-1) |
+| Alertas RADD confirmadas (Alert = 3) | 5.605 | ha | 30 m | 2020-2024 | WUR RADD (Sentinel-1) |
 | Área quemada MODIS | 3.246 | ha | 500 m | 2020-2024 | MCD64A1 |
 
 ## Lectura económica (Sinú) — epígrafe 5.2.4 y Tabla 8 de la tesis
@@ -59,7 +59,7 @@ Al no ser un flujo anual, la cifra no se capitaliza. Con la densidad de los píx
 |---|---|---|---|---|---|
 | Superficie de la cuenca | 35.183,22 | km² | — | — | HydroSHEDS `hybas_8`, prefijo de `PFAF_ID` (PREFIX_LEN = 7) |
 | Pérdida de cubierta arbórea Hansen | 57.141 | ha | 100 m | 2020-2024 | UMD Hansen GFC v1.12 |
-| Alertas RADD | 148.930,05 | ha | 100 m | 2020-2024 | WUR RADD (Sentinel-1) |
+| Alertas RADD confirmadas (Alert = 3) | 148.930,05 | ha | 100 m | 2020-2024 | WUR RADD (Sentinel-1) |
 | NDVI 2020 / 2024 | 0,773 / 0,792 | – | 300 m | estación seca jun.-sep. 2020 / 2023 | Sentinel-2 |
 | Indicador de condición C (verdor) 2020 / 2024 | 0,904 / 0,926 | 0–1 | 300 m | jun–sep 2020 / 2023 | Sentinel-2 (referencia H = 0,85) |
 | NDVI Landsat 2024 | 0,813 | – | 500 m | jun–sep 2023 | Landsat 8 (diferencia S2 − Landsat = −0,021) |
@@ -70,7 +70,7 @@ Al no ser un flujo anual, la cifra no se capitaliza. Con la densidad de los píx
 
 > **Nota sobre la delimitación.** El Sinú es una cuenca costera independiente y se selecciona bien con `MAIN_BAS` de HydroBASINS. El Alto Madre de Dios, en cambio, es un afluente amazónico, y `MAIN_BAS` arrastra toda la red amazónica aguas arriba (unos 5,9 millones de km² en la primera ejecución). Por eso se delimita por coincidencia de prefijo del código Pfafstetter (`PFAF_ID`) en el nivel más fino `hybas_8`. El ajuste de `PREFIX_LEN` está documentado en los comentarios `FIX` de los scripts: con 6 dígitos salen 125.554 km² y con 7, 35.183 km², que es el valor adoptado.
 
-> La pérdida con firma minera (1.371 ha) es una fracción pequeña de la pérdida Hansen total (57.141 ha) y debe leerse como una cota inferior de la superficie minera: el filtro espectral omite pozas inundadas, zonas en regeneración y minería bajo dosel. El resto de la pérdida no puede atribuirse a una causa concreta sin un análisis de impulsores.
+> La pérdida con firma minera (1.371 ha) es una fracción pequeña de la pérdida Hansen total (57.141 ha) y probablemente infraestima la superficie minera (el filtro espectral, B11 > 0,25 y NDVI < 0,3, omite pozas inundadas, zonas revegetadas y la pérdida de 2024), aunque no es una cota inferior estricta: puede incluir falsos positivos, como barras fluviales, deslizamientos o suelo desnudo. El resto de la pérdida no puede atribuirse a una causa concreta sin un análisis de impulsores.
 
 ## Random Forest — `rf_biomass_mdb_to_madrededios.js` (etiqueta: NASA/ORNL `agb`, 2010, 300 m)
 | Variable | Valor | Unidad | Notas |
