@@ -16,6 +16,6 @@ El benchmark se usa como **referencia estructural** (arquitectura de cuentas, co
 **Lógica de la comparación.** SEEA-AI debe:
 - reproducir la relación *funcional* condición → flujo de servicio → valor;
 - mantener los valores estimados en el orden de magnitud esperable para paisajes de extensión y condición comparables;
-- respetar las identidades contables del SEEA-EA (activo = valor presente de los flujos; ΔK como depreciación o acumulación).
+- respetar las identidades contables del SEEA-EA (activo = valor presente de los flujos; ΔK como pérdida de valor del activo (degradación) o acumulación).
 
 En esta demostración sintética, Murrumbidgee actúa como ancla de calibración. En la tesis, las aplicaciones tropicales **sí** incorporan recalibración contextual con muestras de cada cuenca. La prueba con cuencas retenidas (epígrafe 5.2.4.6) muestra que el modelo no se transfiere sin esa recalibración.
