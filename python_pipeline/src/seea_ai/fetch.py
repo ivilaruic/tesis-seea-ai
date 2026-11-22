@@ -57,7 +57,10 @@ def offline_sample(bbox, year, site_name, size=256, seed=None):
     intended only to exercise the pipeline reproducibly. Flagged as
     source='offline_sample'.
     """
-    h = abs(hash((site_name, round(bbox[0], 2), round(bbox[1], 2)))) % (2**31)
+    # Semilla estable entre ejecuciones (hash() de Python cambia en cada proceso).
+    import hashlib
+    key = f"{site_name}|{round(bbox[0], 2)}|{round(bbox[1], 2)}".encode()
+    h = int(hashlib.sha256(key).hexdigest(), 16) % (2**31)
     rng = np.random.default_rng((h if seed is None else seed))
     yy, xx = np.mgrid[0:size, 0:size] / size
     # base vegetation gradient + meandering river (low NDVI) corridor
