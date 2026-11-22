@@ -29,13 +29,13 @@ chk('S2', 'Sinú, escenario base (130 tCO2/ha, 25 USD)', expo(A_SINU, 130, P_BAS
 chk('S3', 'Sinú, escenario alto (150 tCO2/ha, 30 USD)', expo(A_SINU, 150, P_MAX), 65.6, 0.05, 'Tabla 8')
 chk('S4', 'Sinú, base con lambda_R = 0,30', expo(A_SINU, 130, P_BASE, 0.30), 14.2, 0.1, 'Resumen; 5.2.4')
 chk('S5', 'Sinú, stock expuesto (MtCO2)', A_SINU * 130 / 1e6, 1.90, 0.01, 'results/VALIDATION_RESULTS.md; 5.2.4')
-# --- Alto Madre de Dios (Tabla A.5) ---
-chk('M1', 'AMdD, escenario conservador (390, 20 USD)', expo(A_MDD, 390, P_MIN), 445.7, 0.05, 'Tabla A.5')
-chk('M2', 'AMdD, escenario base (410, 25 USD)', expo(A_MDD, 410, P_BASE), 585.7, 0.05, 'Tabla A.5; 5.2.4.3')
-chk('M3', 'AMdD, escenario alto (430, 30 USD)', expo(A_MDD, 430, P_MAX), 737.1, 0.05, 'Tabla A.5')
-chk('M4', 'AMdD, base con lambda_R = 0,30', expo(A_MDD, 410, P_BASE, 0.30), 175.7, 0.05, 'Anexo IV')
-chk('M5', 'AMdD, base con lambda_R = 0,60', expo(A_MDD, 410, P_BASE, 0.60), 351.4, 0.05, 'Anexo IV')
-chk('M6', 'AMdD, stock expuesto (MtCO2)', A_MDD * 410 / 1e6, 23.4, 0.05, 'Anexo IV')
+# --- Alto Madre de Dios (Tabla A.2) ---
+chk('M1', 'AMdD, escenario conservador (390, 20 USD)', expo(A_MDD, 390, P_MIN), 445.7, 0.05, 'Tabla A.2')
+chk('M2', 'AMdD, escenario base (410, 25 USD)', expo(A_MDD, 410, P_BASE), 585.7, 0.05, 'Tabla A.2; 5.2.4.3')
+chk('M3', 'AMdD, escenario alto (430, 30 USD)', expo(A_MDD, 430, P_MAX), 737.1, 0.05, 'Tabla A.2')
+chk('M4', 'AMdD, base con lambda_R = 0,30', expo(A_MDD, 410, P_BASE, 0.30), 175.7, 0.05, 'Anexo I')
+chk('M5', 'AMdD, base con lambda_R = 0,60', expo(A_MDD, 410, P_BASE, 0.60), 351.4, 0.05, 'Anexo I')
+chk('M6', 'AMdD, stock expuesto (MtCO2)', A_MDD * 410 / 1e6, 23.4, 0.05, 'Anexo I')
 # --- Contraste con IDEAM (epígrafe 5.2.4.5) ---
 ideam_c, ideam_se = 38.74, 4.58        # MgC/ha, bosque región Caribe (IFN)
 ideam = ideam_c * C2CO2
@@ -63,10 +63,10 @@ chk('E3', 'Sinú, cambio de densidad con etiqueta 2020 (%)', (160.94 / 128.2 - 1
 chk('E4', 'AMdD, cambio de densidad con etiqueta 2020 (%)', (467.435 / 410.6 - 1) * 100, 13.8, 0.1, '5.2.4.7')
 # --- Conversiones del módulo RF ---
 chk('R1', 'RMSE 13,2 tC/ha en tCO2/ha', 13.2 * C2CO2, 48.4, 0.05, '5.2.3.1')
-chk('R2', 'RMSE 13,3 tC/ha en tCO2/ha', 13.3 * C2CO2, 48.8, 0.05, 'Anexo IV')
+chk('R2', 'RMSE 13,3 tC/ha en tCO2/ha', 13.3 * C2CO2, 48.8, 0.05, 'Anexo I')
 chk('R3', 'Densidad AMdD 409,8 tCO2/ha en MgC/ha', 409.8 / C2CO2, 111.8, 0.05, '5.2.4.5')
-chk('R4', 'Cociente de áreas AMdD/Sinú', A_MDD / A_SINU, 3.9, 0.05, 'Anexo IV')
-chk('R5', 'Cociente de densidades AMdD/Sinú', 410 / 130, 3.2, 0.05, 'Anexo IV')
+chk('R4', 'Cociente de áreas AMdD/Sinú', A_MDD / A_SINU, 3.9, 0.05, 'Anexo I')
+chk('R5', 'Cociente de densidades AMdD/Sinú', 410 / 130, 3.2, 0.05, 'Anexo I')
 # --- Benchmark Murray–Darling (Smith et al., 2025) ---
 ha_mdb = 1.06e8
 chk('B1', 'Secuestro CSIRO por ha (tCO2/ha·año)', 1054e6 / ha_mdb, 9.9, 0.05, '5.2.6; benchmark')
