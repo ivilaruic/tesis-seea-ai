@@ -22,7 +22,7 @@ Por hectárea (÷ ≈1,06·10⁸ ha):
 - stock: **346 tCO₂/ha**, dominado por el suelo;
 - retención de sedimentos: **0,47 t/ha·año**.
 
-## Comparación SEEA-AI frente al benchmark (epígrafe 5.2.6 y Tabla 9 de la tesis)
+## Comparación SEEA-AI frente al benchmark (epígrafe 5.2.4 y Figura 2 de la tesis; la Tabla 9 del epígrafe 5.2.6 es una comparación cualitativa)
 
 | Variable (por ha) | SEEA-AI (observación de la Tierra) | Smith et al. (2025) | Lectura |
 |---|---|---|---|
