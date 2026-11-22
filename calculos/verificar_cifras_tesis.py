@@ -74,25 +74,32 @@ chk('B2', 'Stock CSIRO por ha (tCO2/ha)', 36708e6 / ha_mdb, 346, 0.5, '5.2.6; be
 chk('B3', 'Retención de sedimentos CSIRO por ha (t/ha·año)', 49725e3 / ha_mdb, 0.47, 0.005, '5.2.6; benchmark')
 chk('B4', 'NPP SEEA-AI frente a CSIRO (%)', (12.6 / (1054e6 / ha_mdb) - 1) * 100, 27, 0.5, 'results/BENCHMARK')
 
-# --- Lectura económica: depreciación anual frente al PIB (epígrafe 5.2.5.5) ---
+# --- Lectura económica: pérdida anual de valor frente al PIB (epígrafe 5.2.5.5) ---
 # PIB de Córdoba 2024pr: 30.952 miles de millones COP (DANE, boletín PIBDEP 2024pr, 30/05/2025)
 # TRM media 2024: 4.072,59 COP/USD (Banco de la República, serie histórica)
 # PIB de Madre de Dios 2023: 3.381 millones S/ (BCRP, serie RD17039DA); tipo de cambio medio 2023: 3,74 S/ por USD (BCRP, PM05289PA)
-ANIOS = 4                                   # periodo 2020-2024
+ANIOS = 5                                   # cinco capas anuales de pérdida Hansen (lossyear 20-24: 2020, 2021, 2022, 2023 y 2024)
 PIB_COR = 30_952e3 / 4_072.59               # millones USD
 PIB_MDD = 3_381 / 3.74                      # millones USD
 chk('D1', 'PIB de Córdoba 2024 en millones USD', PIB_COR, 7600, 1, '5.2.5.5')
-chk('D2', 'Sinú, depreciación anual, escenario base (M USD)', expo(A_SINU, 130, P_BASE) / ANIOS, 11.8, 0.05, '5.2.5.5')
-chk('D3', 'Sinú, depreciación anual con lambda_R = 0,30 (M USD)', expo(A_SINU, 130, P_BASE, 0.30) / ANIOS, 3.6, 0.05, '5.2.5.5')
-chk('D4', 'Sinú, depreciación anual con densidad de píxeles perdidos 306,08 (M USD)', expo(A_SINU, 306.080, P_BASE) / ANIOS, 27.9, 0.05, '5.2.5.5')
-chk('D5', 'Sinú, depreciación base en % del PIB de Córdoba', expo(A_SINU, 130, P_BASE) / ANIOS / PIB_COR * 100, 0.16, 0.005, 'Resumen; 1.7; 5.2.5.5; 7.1')
-chk('D6', 'Sinú, límite inferior en % del PIB de Córdoba', expo(A_SINU, 130, P_BASE, 0.30) / ANIOS / PIB_COR * 100, 0.05, 0.005, '5.2.5.5')
-chk('D7', 'Sinú, límite superior en % del PIB de Córdoba', expo(A_SINU, 306.080, P_BASE) / ANIOS / PIB_COR * 100, 0.37, 0.005, '5.2.5.5')
+chk('D2', 'Sinú, pérdida anual de valor, escenario base (M USD)', expo(A_SINU, 130, P_BASE) / ANIOS, 9.5, 0.05, '5.2.5.5')
+chk('D3', 'Sinú, pérdida anual de valor con lambda_R = 0,30 (M USD)', expo(A_SINU, 130, P_BASE, 0.30) / ANIOS, 2.8, 0.05, '5.2.5.5')
+chk('D4', 'Sinú, pérdida anual de valor con densidad de píxeles perdidos 306,08 (M USD)', expo(A_SINU, 306.080, P_BASE) / ANIOS, 22.3, 0.05, '5.2.5.5')
+chk('D5', 'Sinú, pérdida anual de valor (base) en % del PIB de Córdoba', expo(A_SINU, 130, P_BASE) / ANIOS / PIB_COR * 100, 0.12, 0.005, 'Resumen; 1.7; 5.2.5.5; 7.1')
+chk('D6', 'Sinú, límite inferior en % del PIB de Córdoba', expo(A_SINU, 130, P_BASE, 0.30) / ANIOS / PIB_COR * 100, 0.04, 0.005, '5.2.5.5')
+chk('D7', 'Sinú, límite superior en % del PIB de Córdoba', expo(A_SINU, 306.080, P_BASE) / ANIOS / PIB_COR * 100, 0.29, 0.005, '5.2.5.5')
 chk('D8', 'PIB de Madre de Dios 2023 en millones USD', PIB_MDD, 904, 0.5, '5.2.5.5')
-chk('D9', 'AMdD, depreciación anual, escenario base (M USD)', expo(A_MDD, 410, P_BASE) / ANIOS, 146, 0.5, 'Resumen; 5.2.5.5')
-chk('D10', 'AMdD, depreciación anual con lambda_R = 0,30 (M USD)', expo(A_MDD, 410, P_BASE, 0.30) / ANIOS, 43.9, 0.05, '5.2.5.5')
-chk('D11', 'AMdD, depreciación base en % del PIB de Madre de Dios', expo(A_MDD, 410, P_BASE) / ANIOS / PIB_MDD * 100, 16, 0.5, 'Resumen; 1.7; 5.2.5.5; 7.1')
-chk('D12', 'AMdD, lambda_R = 0,30 en % del PIB de Madre de Dios', expo(A_MDD, 410, P_BASE, 0.30) / ANIOS / PIB_MDD * 100, 4.9, 0.05, '5.2.5.5')
+chk('D9', 'AMdD, pérdida anual de valor, escenario base (M USD)', expo(A_MDD, 410, P_BASE) / ANIOS, 117, 0.5, 'Resumen; 5.2.5.5')
+chk('D10', 'AMdD, pérdida anual de valor con lambda_R = 0,30 (M USD)', expo(A_MDD, 410, P_BASE, 0.30) / ANIOS, 35.1, 0.05, '5.2.5.5')
+chk('D11', 'AMdD, pérdida anual de valor (base) en % del PIB de Madre de Dios', expo(A_MDD, 410, P_BASE) / ANIOS / PIB_MDD * 100, 13, 0.5, 'Resumen; 1.7; 5.2.5.5; 7.1')
+chk('D12', 'AMdD, lambda_R = 0,30 en % del PIB de Madre de Dios', expo(A_MDD, 410, P_BASE, 0.30) / ANIOS / PIB_MDD * 100, 3.9, 0.05, '5.2.5.5')
+
+chk('D13', 'AMdD, pérdida anual con la densidad de Asner et al. (M USD)', 481.158 / ANIOS, 96.2, 0.05, '5.2.5.5')
+chk('D14', 'AMdD, pérdida anual con la densidad de Asner et al. en % del PIB', 481.158 / ANIOS / PIB_MDD * 100, 10.6, 0.05, '5.2.5.5')
+chk('D15', 'AMdD, pérdida anual con superficie RADD (148.930 ha) en % del PIB', expo(148_930, 410, P_BASE) / ANIOS / PIB_MDD * 100, 34, 0.5, '5.2.5.5')
+chk('D16', 'Sinú, pérdida anual con superficie RADD (5.605 ha) en % del PIB', expo(5_605, 130, P_BASE) / ANIOS / PIB_COR * 100, 0.05, 0.005, '5.2.5.5')
+chk('D17', 'Factor de las ratios con coste social del carbono de 185 USD/tCO2', 185 / P_BASE, 7, 0.5, '5.2.5.5')
+chk('D18', 'Sinú, exposición con densidad oficial IDEAM, redondeada en el Resumen (M USD)', expo(A_SINU, 142.047, P_BASE), 52, 0.5, 'Resumen')
 
 out = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'verificacion_cifras.csv')
 with open(out, 'w', newline='', encoding='utf-8') as f:

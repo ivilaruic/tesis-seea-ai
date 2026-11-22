@@ -41,14 +41,20 @@ B2,Stock CSIRO por ha (tCO2/ha),346.302,346,0.5,True,5.2.6; benchmark
 B3,Retención de sedimentos CSIRO por ha (t/ha·año),0.469,0.47,0.005,True,5.2.6; benchmark
 B4,NPP SEEA-AI frente a CSIRO (%),26.717,27,0.5,True,results/BENCHMARK
 D1,PIB de Córdoba 2024 en millones USD,7600.078,7600,1,True,5.2.5.5
-D2,"Sinú, depreciación anual, escenario base (M USD)",11.846,11.8,0.05,True,5.2.5.5
-D3,"Sinú, depreciación anual con lambda_R = 0,30 (M USD)",3.554,3.6,0.05,True,5.2.5.5
-D4,"Sinú, depreciación anual con densidad de píxeles perdidos 306,08 (M USD)",27.892,27.9,0.05,True,5.2.5.5
-D5,"Sinú, depreciación base en % del PIB de Córdoba",0.156,0.16,0.005,True,Resumen; 1.7; 5.2.5.5; 7.1
-D6,"Sinú, límite inferior en % del PIB de Córdoba",0.047,0.05,0.005,True,5.2.5.5
-D7,"Sinú, límite superior en % del PIB de Córdoba",0.367,0.37,0.005,True,5.2.5.5
+D2,"Sinú, pérdida anual de valor, escenario base (M USD)",9.477,9.5,0.05,True,5.2.5.5
+D3,"Sinú, pérdida anual de valor con lambda_R = 0,30 (M USD)",2.843,2.8,0.05,True,5.2.5.5
+D4,"Sinú, pérdida anual de valor con densidad de píxeles perdidos 306,08 (M USD)",22.313,22.3,0.05,True,5.2.5.5
+D5,"Sinú, pérdida anual de valor (base) en % del PIB de Córdoba",0.125,0.12,0.005,True,Resumen; 1.7; 5.2.5.5; 7.1
+D6,"Sinú, límite inferior en % del PIB de Córdoba",0.037,0.04,0.005,True,5.2.5.5
+D7,"Sinú, límite superior en % del PIB de Córdoba",0.294,0.29,0.005,True,5.2.5.5
 D8,PIB de Madre de Dios 2023 en millones USD,904.011,904,0.5,True,5.2.5.5
-D9,"AMdD, depreciación anual, escenario base (M USD)",146.424,146,0.5,True,Resumen; 5.2.5.5
-D10,"AMdD, depreciación anual con lambda_R = 0,30 (M USD)",43.927,43.9,0.05,True,5.2.5.5
-D11,"AMdD, depreciación base en % del PIB de Madre de Dios",16.197,16,0.5,True,Resumen; 1.7; 5.2.5.5; 7.1
-D12,"AMdD, lambda_R = 0,30 en % del PIB de Madre de Dios",4.859,4.9,0.05,True,5.2.5.5
+D9,"AMdD, pérdida anual de valor, escenario base (M USD)",117.139,117,0.5,True,Resumen; 5.2.5.5
+D10,"AMdD, pérdida anual de valor con lambda_R = 0,30 (M USD)",35.142,35.1,0.05,True,5.2.5.5
+D11,"AMdD, pérdida anual de valor (base) en % del PIB de Madre de Dios",12.958,13,0.5,True,Resumen; 1.7; 5.2.5.5; 7.1
+D12,"AMdD, lambda_R = 0,30 en % del PIB de Madre de Dios",3.887,3.9,0.05,True,5.2.5.5
+D13,"AMdD, pérdida anual con la densidad de Asner et al. (M USD)",96.232,96.2,0.05,True,5.2.5.5
+D14,"AMdD, pérdida anual con la densidad de Asner et al. en % del PIB",10.645,10.6,0.05,True,5.2.5.5
+D15,"AMdD, pérdida anual con superficie RADD (148.930 ha) en % del PIB",33.772,34,0.5,True,5.2.5.5
+D16,"Sinú, pérdida anual con superficie RADD (5.605 ha) en % del PIB",0.048,0.05,0.005,True,5.2.5.5
+D17,Factor de las ratios con coste social del carbono de 185 USD/tCO2,7.4,7,0.5,True,5.2.5.5
+D18,"Sinú, exposición con densidad oficial IDEAM, redondeada en el Resumen (M USD)",51.776,52,0.5,True,Resumen
