@@ -1,0 +1,6 @@
+Criterio,SEEA tradicional,SEEA-AI
+Frecuencia de actualización,"Variable según programa, indicador y mandato",Actualización satelital potencial; latencia no medida
+Resolución espacial,"Nacional/subnacional, con productos espaciales según programa",Píxel/cuenca según producto y escala de procesamiento
+Error biofísico,"Inventarios, modelos y controles estadísticos oficiales",R²/RMSE internos y validación por bloques; validación de campo pendiente
+Reproducibilidad,Variable según documentación y acceso a microdatos,"Parcial: código abierto, ejecución y activos no totalmente archivados"
+Coste operativo,No comparable sin perímetro funcional común,No estimado de forma auditada

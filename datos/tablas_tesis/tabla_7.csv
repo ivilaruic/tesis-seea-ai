@@ -1,0 +1,8 @@
+Indicador,2020,2024,Fuente
+NDVI,"0,563","0,622",Sentinel-2
+Índice de condición C,"0,642","0,714",Sentinel-2
+Biomasa aérea de carbono (tCO₂/ha),132,140,Random Forest
+NDVI (verificación),—,"0,655",Landsat 8
+Pérdida de bosque (ha),—,14.580,Hansen GFC
+Alertas de deforestación (ha),—,5.605,RADD/GFW
+Área quemada (ha),—,3.246,MODIS

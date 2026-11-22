@@ -1,0 +1,6 @@
+Dimensión,ONS (Reino Unido),Italia (ARIES),"CSIRO (Murray-Darling, Australia)",SEEA-AI (la tesis)
+Cobertura territorial,Nacional completa,Nacional completa,Cuenca hidrográfica (piloto experimental),Cuenca hidrográfica (caso de estudio)
+Recursos humanos,No estimados en la tesis,No estimados en la tesis,No estimados en la tesis,Proyecto doctoral; coste completo no estimado
+Frecuencia de actualización,Anual,"Variable, plurianual","Experimental, no periódica",Potencial según disponibilidad; latencia no medida
+Automatización mediante IA,Baja,Media,Baja-media,Parcial: RF para biomasa; condición por fórmula NDVI
+Estatus normativo,Estadística oficial,Estadística oficial (cumplimiento legal),"Cuentas experimentales, no oficiales","Modelo académico, no oficial"
