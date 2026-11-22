@@ -1,3 +1,12 @@
+// =====================================================================
+// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// Script: validation_sinu.js
+// Qué hace: Río Sinú 2020-2024: cuenta completa (NDVI, condición C, NPP, RUSLE, Hansen, RADD, MODIS).
+// Dónde se usa en la tesis: Epígrafe 5.2.4; Tablas 7 y 8; datos/resultados_gee/sinu_indicadores.csv
+// Ejecución: Google Earth Engine Code Editor (code.earthengine.google.com).
+// Activo requerido: projects/seea-ai/assets/mdb_boundary (véase docs/limite_murray_darling.md).
+// Los comentarios internos del código pueden estar en inglés (versión de trabajo original).
+// =====================================================================
 // =====================================================
 // SEEA-AI | RÍO SINÚ — full account  |  2020 vs 2024
 // Mirror of the Murray-Darling script, re-localised for the TROPICS:

@@ -1,3 +1,12 @@
+// =====================================================================
+// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// Script: rf_biomass_mdb_to_madrededios.js
+// Qué hace: Random Forest de biomasa: entrenamiento en Murray–Darling y aplicación al Alto Madre de Dios. ADD_MDD_TRAINING = true reproduce la configuración B de la tesis.
+// Dónde se usa en la tesis: Epígrafe 5.2.4.3; Anexo IV (Tabla A.5); datos/resultados_gee/random_forest_metricas.csv
+// Ejecución: Google Earth Engine Code Editor (code.earthengine.google.com).
+// Activo requerido: projects/seea-ai/assets/mdb_boundary (véase docs/limite_murray_darling.md).
+// Los comentarios internos del código pueden estar en inglés (versión de trabajo original).
+// =====================================================================
 // =====================================================
 // SEEA-AI | RANDOM FOREST (regression) — aboveground biomass carbon
 // Labels: NASA/ORNL biomass_carbon_density (agb, tC/ha)
@@ -113,7 +122,7 @@ print('RF R2 (test, MDB)', ee.Number(1).subtract(ssRes.divide(ssTot)));
 print('RF RMSE tC/ha (test)', ssRes.divide(test.size()).sqrt());
 // Variable importance dropped: rf.explain() on the merged MDB+MdD training
 // set hit "Earth Engine memory capacity exceeded" without affecting R2/RMSE/
-// AGB above. Not needed for the paper's results; uncomment only if you want
+// AGB above. Not needed for the thesis results; uncomment only if you want
 // to try it standalone (fewer trees or a separate run).
 // print('RF variable importance', rf.explain().get('importance'));
 
@@ -149,7 +158,7 @@ m(dAGB_M, mdd, 'RF_dAGB_MdD_2020_2024_tCO2_ha');
 // ----- Exports (added for Figura 7 — biomass map, mirrors Figura 2 for Sinú) -----
 // Previously missing: this script only rendered layers on the map and printed
 // basin means, with no GeoTIFF export. Needed so the AGB/dAGB maps can be
-// pulled into the paper the same way the S2/Hansen/mining maps were.
+// pulled into the thesis the same way the S2/Hansen/mining maps were.
 Export.image.toDrive({image: agbM24, description: 'MdD_RF_AGB_2024_tCO2ha',
   folder: 'SEEA_AI_VALIDATION', region: mdd.geometry(), scale: 500, maxPixels: 1e13});
 Export.image.toDrive({image: dAGB_M, description: 'MdD_RF_dAGB_2020_2024_tCO2ha',

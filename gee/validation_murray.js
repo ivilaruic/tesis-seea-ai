@@ -1,3 +1,12 @@
+// =====================================================================
+// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// Script: validation_murray.js
+// Qué hace: Murray–Darling 2018-19: indicadores de extensión, condición y flujos frente al benchmark SEEA-EA del CSIRO (Smith et al., 2025).
+// Dónde se usa en la tesis: Epígrafes 5.1 y 5.2.6; Tabla 9; datos/resultados_gee/murray_darling_indicadores.csv
+// Ejecución: Google Earth Engine Code Editor (code.earthengine.google.com).
+// Activo requerido: projects/seea-ai/assets/mdb_boundary (véase docs/limite_murray_darling.md).
+// Los comentarios internos del código pueden estar en inglés (versión de trabajo original).
+// =====================================================================
 // =====================================================
 // SEEA-AI  |  MURRAY-DARLING BASIN  |  Financial year 2018-19
 // External validation against Smith et al. (2025), Ecosystem Services 74, 101741.
