@@ -18,7 +18,7 @@
 // ADD_SINU_TRAINING = true (adds tropical samples), or train on a global sample.
 // Temporal note: NASA/ORNL labels are a 2010 baseline; S2 predictors are 2018-24.
 // =====================================================
-var ADD_SINU_TRAINING = false;   // false = pure MDB->Sinú transfer demo (biased low)
+var ADD_SINU_TRAINING = true;    // true = configuración B de la tesis; false = transferencia pura (configuración A, sesgada a la baja)
 
 // ----- AOIs -----
 var mdb = ee.FeatureCollection('projects/seea-ai/assets/mdb_boundary');
