@@ -1,28 +1,25 @@
-# Data dictionary — SEEA-AI accounts
+# Diccionario de datos: cuentas de la demostración SEEA-AI
 
-Each `*_account.json` / row of `accounts_summary.csv` contains:
+Cada `*_account.json` y cada fila de `accounts_summary.csv` contienen:
 
-| Field | Unit | SEEA-EA account | Description |
+| Campo | Unidad | Cuenta SEEA-EA | Descripción |
 |---|---|---|---|
-| site | – | – | Site name |
-| year_open / year_close | year | – | Accounting period bounds (2020 → 2024) |
-| source | – | – | EO source: `stac:sentinel-2-l2a`, `gee`, or `offline_sample` |
-| extent_ha | ha | Extent | Total analysed area |
-| cond_open / cond_close | index 0–1 | Condition | Territorial mean ecosystem condition C̄ |
-| dcond | index | Condition | Δ condition over the period |
-| deforestation_ha / degradation_ha / burned_ha | ha | Condition (change attribution) | Hectares by disturbance class |
-| carbon_stock_open/close_tco2 | tCO₂e | Asset (carbon) | Condition-scaled biomass carbon stock |
-| dcarbon_tco2 | tCO₂e | Physical flow | Net carbon stock change |
-| sediment_flow_open/close_t | t/yr | Physical flow | Sediment-retention service flow |
-| carbon_value_loss_usd | USD | Monetary flow | Value of carbon stock lost |
-| sediment_value_loss_usd | USD | Monetary flow | Value of sediment-retention lost |
-| flow_value_loss_usd | USD | Monetary flow | Total annual service-value loss |
-| nca_open/close_usd | USD | Asset | Natural-capital asset value (NPV of flows + carbon stock) |
-| dK_usd | USD | Asset | Change in natural-capital asset value (wealth) |
+| site | – | – | Nombre de la zona |
+| year_open / year_close | año | – | Límites del periodo contable (2020 → 2024) |
+| source | – | – | Fuente de observación de la Tierra: `stac:sentinel-2-l2a`, `gee` u `offline_sample` |
+| extent_ha | ha | Extensión | Superficie total analizada |
+| cond_open / cond_close | índice 0–1 | Condición | Condición media del territorio C̄ |
+| dcond | índice | Condición | Variación de la condición en el periodo |
+| deforestation_ha / degradation_ha / burned_ha | ha | Condición (atribución del cambio) | Hectáreas por tipo de perturbación |
+| carbon_stock_open/close_tco2 | tCO₂e | Activo (carbono) | Stock de carbono de la biomasa escalado por la condición |
+| dcarbon_tco2 | tCO₂e | Flujo físico | Variación neta del stock de carbono |
+| sediment_flow_open/close_t | t/año | Flujo físico | Flujo del servicio de retención de sedimentos |
+| carbon_value_loss_usd | USD | Flujo monetario | Valor del stock de carbono perdido |
+| sediment_value_loss_usd | USD | Flujo monetario | Valor perdido de retención de sedimentos |
+| flow_value_loss_usd | USD | Flujo monetario | Pérdida anual total de valor de los servicios |
+| nca_open/close_usd | USD | Activo | Valor del activo de capital natural (valor presente de los flujos + stock de carbono) |
+| dK_usd | USD | Activo | Variación del valor del activo de capital natural (riqueza) |
 
-`ai_metrics.csv`: per-site R² and RMSE of the Random-Forest condition model
-against reference (field-style) condition labels.
+`ai_metrics.csv` recoge, para cada zona, el R² y el RMSE del modelo de condición frente a etiquetas de condición de referencia de la demostración.
 
-> ⚠️ When `source = offline_sample`, all figures are **reproducible demonstration
-> outputs from deterministic synthetic inputs**, not measured observations. Run
-> with `--backend stac` (Sentinel-2) or the GEE backend for real values.
+> ⚠️ Cuando `source = offline_sample`, todas las cifras son **salidas de demostración reproducibles a partir de entradas sintéticas deterministas**, no observaciones medidas. Para obtener valores reales hay que ejecutar con `--backend stac` (Sentinel-2) o con el backend de GEE.
