@@ -6,7 +6,7 @@ authors:
   - family-names: "Vilar Ramírez"
     given-names: "Ivan"
     affiliation: "Universitat Internacional de Catalunya"
-version: "1.0-deposito"
+version: "1.3-deposito"
 license: MIT
 repository-code: "https://github.com/ivilaruic/tesis-seea-ai"
 keywords: [capital natural, SEEA-EA, observación de la Tierra, inteligencia artificial, contabilidad ambiental, carbono]

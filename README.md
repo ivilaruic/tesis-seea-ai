@@ -14,7 +14,7 @@ Este repositorio reúne todo lo que sustenta las cifras empíricas de la tesis:
 
 Parte del repositorio de trabajo del proyecto, con todo su historial de cambios, e incorpora las validaciones y la documentación elaboradas para el depósito. Cada tabla y cada epígrafe con resultados cuantitativos se puede rastrear hasta un script de Google Earth Engine y un archivo de datos (véase `docs/correspondencia_tesis.md`).
 
-> **Versión de depósito:** la versión que corresponde exactamente al texto depositado es la *release* etiquetada `v1.0-deposito`.
+> **Versión de depósito:** la versión que corresponde exactamente al texto depositado es la *release* etiquetada `v1.3-deposito` (las etiquetas `v1.0`–`v1.2` se conservan como versiones históricas).
 
 ---
 
@@ -69,11 +69,11 @@ Toda la documentación está en español. Algunos comentarios internos del códi
 |---|---|---|
 | Ajuste del Random Forest en Murray–Darling | R² = 0,77; RMSE = 13,2 tC/ha | `datos/resultados_gee/random_forest_metricas.csv` |
 | Validación cruzada por bloques de 1° | R² = 0,76 | `datos/resultados_gee/validacion_cruzada_bloques.csv` |
-| Pérdida forestal 2020–2024 | Sinú: 14.580 ha. Alto Madre de Dios: 57.141 ha | `sinu_indicadores.csv`, `madre_de_dios_indicadores.csv` |
+| Pérdida de cubierta arbórea (Hansen GFC) 2020–2024 | Sinú: 14.580 ha. Alto Madre de Dios: 57.141 ha | `sinu_indicadores.csv`, `madre_de_dios_indicadores.csv` |
 | Exposición bruta del stock de carbono (escenario base) | Sinú: 47,4 M USD (32,1–65,6). Alto Madre de Dios: 585,7 M USD (446–737) | `datos/tablas_tesis/tabla_8.csv`, `tabla_A_2.csv` |
-| Comparación con ESA CCI y GEDI (configuración de la tesis) | densidades entre un 3 % y un 21 % por debajo de ambos productos | `comparacion_productos_referencia.csv` |
+| Comparación con ESA CCI y GEDI (configuración de la tesis) | densidades medias, en los puntos de evaluación comunes, entre un 3 % y un 21 % por debajo de ambos productos | `comparacion_productos_referencia.csv` |
 | Prueba con cuenca retenida | el modelo no se transfiere sin recalibración | `comparacion_productos_referencia.csv` (configuración C) |
-| Sensibilidad a la etiqueta de 2020 | densidades entre un 14 % y un 26 % más altas; las exposiciones siguen dentro de los rangos | `sensibilidad_etiqueta_2020.csv` |
+| Sensibilidad a la etiqueta de 2020 | densidades entre un 14 % y un 26 % más altas; con la densidad media de cuenca, las exposiciones siguen dentro de los rangos (con la de los píxeles perdidos, el Sinú alcanza 104,5 M USD y los supera) | `sensibilidad_etiqueta_2020.csv` |
 
 Las magnitudes monetarias son **escenarios de exposición bruta del stock de carbono**. Dependen de la densidad de carbono, del precio de referencia (20–30 USD/tCO₂) y de la fracción de liberación. No son cuentas oficiales ni valores de activo.
 
