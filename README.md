@@ -31,11 +31,11 @@ gee/                         Scripts de Google Earth Engine (JavaScript) que gen
   validation_tropical_ind.js   Comparación con ESA CCI y GEDI; cuencas retenidas (epígrafe 5.2.4.6)
   validation_blocks_label2020.js  Validación por bloques y etiqueta de 2020 (epígrafe 5.2.4.7)
 calculos/
-  verificar_cifras_tesis.py  Recalcula las 41 cifras derivadas de la tesis (escenarios, contrastes, conversiones) y las compara con el texto
-  verificacion_cifras.csv    Resultado de la verificación (41 de 41 coinciden)
+  verificar_cifras_tesis.py  Recalcula las 53 cifras derivadas de la tesis (escenarios, contrastes, conversiones) y las compara con el texto
+  verificacion_cifras.csv    Resultado de la verificación (53 de 53 coinciden)
   figuras_tesis.py           Genera las Figuras 8 y 9 de la tesis a partir de los CSV
 datos/
-  fuentes_datos.csv          Las 18 fuentes de datos: identificador, versión, resolución, periodo, uso y DOI
+  fuentes_datos.csv          Las 21 fuentes de datos: identificador, versión, resolución, periodo, uso y DOI
   resultados_gee/            Resultados numéricos de todas las ejecuciones (CSV)
   tablas_tesis/              Tablas de datos de la tesis en CSV (Tablas 4, 6-13, A.1 y A.2)
 results/

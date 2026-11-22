@@ -9,7 +9,7 @@ La versión completa y actualizada está en `docs/reproducibilidad.md`. Este arc
 ## Cálculos derivados de la tesis (sin Earth Engine)
     python calculos/verificar_cifras_tesis.py
 
-El script recalcula y comprueba las 41 cifras derivadas de la tesis: escenarios monetarios, contrastes con el IDEAM y con Asner et al. (2010), sensibilidad a la etiqueta y conversiones de unidades.
+El script recalcula y comprueba las 53 cifras derivadas de la tesis: escenarios monetarios, contrastes con el IDEAM y con Asner et al. (2010), sensibilidad a la etiqueta, depreciación anual del capital natural frente al PIB regional (epígrafe 5.2.5.5) y conversiones de unidades.
 
 ## Earth Engine (resultados empíricos)
 1. Hace falta una cuenta de Earth Engine (code.earthengine.google.com). El proyecto en la nube del autor es `seea-ai`.
