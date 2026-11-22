@@ -10,10 +10,10 @@
 ## Ejecución
 ```
 pip install -r requirements.txt
-cd src && python -m seea_ai.run --config ../config/sites.yaml --out ../results/
+cd src && python -m seea_ai.run --config ../config/sites.yaml --backend offline --ai numpy --out ../results
 ```
 
 ## Contenido
 - `src/seea_ai/`: módulos de índices, del modelo de condición, de contabilidad y de lectura de datos.
-- `results/`: salidas de la ejecución sintética (`*_account.json`, `accounts_summary.csv` y `ai_metrics.csv`). Los R² de `ai_metrics.csv` (≈0,80) se refieren al modelo de condición sintético, **no** al Random Forest de biomasa de la tesis (R² = 0,77).
+- `results/`: salidas de la ejecución sintética, reproducibles de forma idéntica con el comando anterior (`*_account.json`, `accounts_summary.csv` y `ai_metrics.csv`). Los R² de `ai_metrics.csv` (≈0,80) se refieren al modelo de condición sintético, **no** al Random Forest de biomasa de la tesis (R² = 0,77).
 - `notebooks/demo.ipynb`: recorrido interactivo.

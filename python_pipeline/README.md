@@ -24,12 +24,15 @@ pip install -r requirements.txt
 ## Ejecución
 
 ```bash
+cd src
 # Sentinel-2 real (compuesto mediano sin nubes) mediante STAC público; no requiere cuenta
-python -m seea_ai.run --backend stac --ai sklearn --out results
+python -m seea_ai.run --config ../config/sites.yaml --backend stac --ai sklearn --out ../results_stac
 
 # Demostración reproducible offline (datos sintéticos deterministas, sin red)
-python -m seea_ai.run --backend offline --ai numpy --out results
+python -m seea_ai.run --config ../config/sites.yaml --backend offline --ai numpy --out ../results
 ```
+
+La ejecución offline es **determinista**: dos ejecuciones sucesivas producen archivos idénticos, y los de `results/` se han generado con ese mismo comando (comprobado el 22/11/2026). La semilla de cada zona se obtiene con un hash SHA-256 estable del nombre y de las coordenadas.
 
 Para cada zona se generan:
 - `results/<zona>_account.json`;
