@@ -1,27 +1,28 @@
-# SEEA-AI validation sites (bounding boxes: [west, south, east, north], EPSG:4326)
+# Zonas de la demostración sintética SEEA-AI (cajas: [oeste, sur, este, norte], EPSG:4326)
+# AVISO: son cajas rectangulares aproximadas para la demostración offline; no coinciden con las
+# cuencas hidrográficas usadas en la tesis (véanse los scripts de gee/ en la raíz del repositorio).
 sites:
-  - name: Murrumbidgee        # Australia — CSIRO Murray-Darling Basin reference region
+  - name: Murrumbidgee        # Australia — región de referencia de la cuenca Murray–Darling (CSIRO)
     bbox: [144.0, -35.5, 146.5, -34.0]
-    role: reference            # used for calibration against CSIRO experimental accounts
+    role: reference            # referencia estructural frente a las cuentas experimentales del CSIRO
     country: Australia
-  - name: Rio_Sinu            # Colombia — primary empirical case (Mandle et al., 2025)
+  - name: Rio_Sinu            # Colombia — caso de uso principal de la tesis
     bbox: [-76.5, 8.0, -75.0, 9.5]
     role: transfer
     country: Colombia
-  - name: Alto_Madre_de_Dios  # Peru — second empirical case (Amazon tributary, Manu/Madre de Dios)
-    bbox: [-72.2, -14.0, -69.8, -11.6]  # approximate bounding box for this simplified offline
-                                         # demo only; the precise boundary used for the published
-                                         # results is the HydroBASINS hybas_8 Pfafstetter-prefix
-                                         # match (~35,183 km2) in gee/validation_madre_de_dios.js
+  - name: Alto_Madre_de_Dios  # Perú — segunda aplicación tropical (afluente amazónico)
+    bbox: [-72.2, -14.0, -69.8, -11.6]  # caja aproximada solo para la demostración; el límite usado
+                                         # en la tesis es la coincidencia de prefijo Pfafstetter en
+                                         # HydroBASINS hybas_8 (~35.183 km2), en gee/validation_madre_de_dios.js
     role: transfer
     country: Peru
 
-# Analysis epochs
+# Épocas de análisis
 epochs: [2020, 2024]
 
-# Economic parameters (base scenario)
+# Parámetros económicos (escenario base)
 economics:
-  carbon_price_usd_per_tco2: 25.0      # World Bank (2024) reference order of magnitude
-  sediment_unit_value_usd_per_t: 18.0  # avoided water-treatment cost
-  discount_rate: 0.03                  # base; sensitivity uses 0.015 / 0.06
-  biomass_to_carbon_fraction: 0.47     # IPCC default
+  carbon_price_usd_per_tco2: 25.0      # orden de magnitud de referencia (World Bank, 2024)
+  sediment_unit_value_usd_per_t: 18.0  # coste evitado de tratamiento de agua
+  discount_rate: 0.03                  # base; la sensibilidad usa 0,015 / 0,06
+  biomass_to_carbon_fraction: 0.47     # valor por defecto del IPCC
