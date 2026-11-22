@@ -49,7 +49,7 @@ Los R² de `ai_metrics.csv` (≈0,80) son del modelo de condición **sintético*
 ```
 src/seea_ai/
   fetch.py            adquisición de datos (STAC / GEE) + muestra offline determinista
-  indices.py          NDVI, NDWI e índice de condición SEEA-EA C∈[0,1]
+  indices.py          NDVI, NDWI e indicador de condición C∈[0,1] (proxy de verdor)
   condition_model.py  Random Forest (sklearn) con alternativa en numpy; R²/RMSE
   accounting.py       extensión, condición, flujos de carbono y sedimentos, valoración, ΔK
   run.py              ejecución de principio a fin + exportación de figuras
