@@ -26,7 +26,8 @@ Para cada resultado cuantitativo de la tesis se indica:
 | Figura 8 (5.2.4.6) | Sesgo y R² frente a ESA CCI y GEDI por configuración | `calculos/figuras_tesis.py` | `results/fig8_comparacion_referencias.png` (a partir de `comparacion_productos_referencia.csv`) |
 | Figura 9 (5.2.4.7) | Exposiciones alternativas frente a los rangos de escenarios | `calculos/figuras_tesis.py` | `results/fig9_exposicion_contrastes.png` (a partir de `densidad_pixeles_perdidos.csv` y `sensibilidad_etiqueta_2020.csv`) |
 
-| Todas las cifras derivadas (Tablas 8 y A.2, 5.2.4.5, 5.2.4.6, 5.2.4.7, conversiones) | Recalculadas y comprobadas: 41/41 | `calculos/verificar_cifras_tesis.py` | `calculos/verificacion_cifras.csv` |
+| Todas las cifras derivadas (Tablas 8 y A.2, 5.2.4.5, 5.2.4.6, 5.2.4.7, 5.2.5.5, conversiones) | Recalculadas y comprobadas: 53/53 | `calculos/verificar_cifras_tesis.py` | `calculos/verificacion_cifras.csv` |
+| 5.2.5.5 Lectura económica: depreciación anual del capital natural frente al PIB (Sinú 0,16 % del PIB de Córdoba; Alto Madre de Dios ≈16 % del PIB de Madre de Dios) | Comprobaciones D1–D12 con el PIB oficial (DANE, BCRP) y los tipos de cambio medios | `calculos/verificar_cifras_tesis.py`, `datos/fuentes_datos.csv` | `calculos/verificacion_cifras.csv` |
 
 ## Configuraciones del módulo de biomasa
 - **A (transferencia pura):** entrenado solo con muestras de Murray–Darling.
