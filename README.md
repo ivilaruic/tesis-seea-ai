@@ -1,65 +1,98 @@
-# SEEA-AI — Natural-capital accounting from AI + remote sensing (reproducible repo)
+# Contabilizar lo invisible: SEEA-AI — repositorio de la tesis doctoral
 
-**Repository:** https://github.com/ivilaruic/SEEA_AI
+**Tesis doctoral:** *Contabilizar lo invisible: SEEA-AI, una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial.*
+**Autor:** Ivan Vilar Ramírez
+**Programa:** Doctorado en Economía y Derecho, Universitat Internacional de Catalunya (UIC Barcelona)
+**Dirección:** Dr. Miquel Bastons Prat (director) y Dra. María Fernanda González Gutiérrez (codirectora)
 
-Accompanies Vilar Ramírez, González & Bastons Prat (2026), *SEEA-AI*, submitted to
-**Ecosystem Services**. Calibrated on the Murray–Darling Basin (validated against
-Smith et al., 2025) and transferred to two independent application basins: the
-río Sinú (Colombia) and Alto Madre de Dios (Peru).
+Este repositorio reúne todo lo que sustenta las cifras empíricas de la tesis:
+- el código;
+- los resultados de cada cálculo;
+- las imágenes;
+- las tablas;
+- las fuentes de datos.
 
-## Contents
+Parte del repositorio de trabajo del proyecto, con todo su historial de cambios, e incorpora las validaciones y la documentación elaboradas para el depósito. Cada tabla y cada epígrafe con resultados cuantitativos se puede rastrear hasta un script de Google Earth Engine y un archivo de datos (véase `docs/correspondencia_tesis.md`).
+
+> **Versión de depósito:** la versión que corresponde exactamente al texto depositado es la *release* etiquetada `v1.0-deposito`.
+
+---
+
+## Estructura
+
 ```
-gee/                              Google Earth Engine scripts (JavaScript)
-  validation_murray.js            MDB 2018-19 vs Smith et al. 2025 (carbon, NPP, RUSLE, Hansen, MODIS)
-  validation_sinu.js              Río Sinú full account 2020-2024 (tropical calibration + RADD)
-  rf_biomass_mdb_to_sinu.js       Random Forest (NASA/ORNL labels): train MDB -> transfer Sinú
-                                   flag ADD_SINU_TRAINING = false (rf_false) / true (rf_true)
-  sinu_change_2020_2024.js        Sinú change analysis (NDVI/NBR deltas, Hansen, RADD, MODIS)
-  validation_madre_de_dios.js     Alto Madre de Dios full account 2020-2024 (Amazon tributary,
-                                   Pfafstetter-prefix AOI, tropical calibration + RADD)
-  rf_biomass_mdb_to_madrededios.js  Random Forest (NASA/ORNL labels): train MDB -> transfer
-                                   Alto Madre de Dios; same flag convention,
-                                   ADD_MDD_TRAINING = false / true
-python_pipeline/                  Offline-reproducible Python implementation + figures
-benchmark/
-  BENCHMARK.md                    Smith et al. 2025 reference values + SEEA-AI comparison (Murray-Darling)
-  CSIRO_DATA_LINKS.md             CSIRO Murray–Darling account-ready data (DOIs) to verify
-data/mdb_boundary/README.md       Official MDBA perimeter: EE asset + download to reproduce
+gee/                         Scripts de Google Earth Engine (JavaScript) que generan todos los resultados
+  validation_murray.js         Murray–Darling 2018-19 frente al benchmark del CSIRO
+  validation_sinu.js           Río Sinú 2020-2024: cuenta completa
+  sinu_change_2020_2024.js     Río Sinú: análisis de cambio
+  validation_madre_de_dios.js  Alto Madre de Dios 2020-2024: cuenta completa
+  rf_biomass_mdb_to_sinu.js    Random Forest de biomasa: Murray–Darling → Sinú
+  rf_biomass_mdb_to_madrededios.js  Random Forest de biomasa: Murray–Darling → Alto Madre de Dios
+  validation_tropical_ind.js   Comparación con ESA CCI y GEDI; cuencas retenidas (epígrafe 5.2.4.6)
+  validation_blocks_label2020.js  Validación por bloques y etiqueta de 2020 (epígrafe 5.2.4.7)
+calculos/
+  verificar_cifras_tesis.py  Recalcula las 41 cifras derivadas de la tesis (escenarios, contrastes, conversiones) y las compara con el texto
+  verificacion_cifras.csv    Resultado de la verificación (41 de 41 coinciden)
+datos/
+  fuentes_datos.csv          Las 18 fuentes de datos: identificador, versión, resolución, periodo, uso y DOI
+  resultados_gee/            Resultados numéricos de todas las ejecuciones (CSV)
+  tablas_tesis/              Tablas de datos de la tesis en CSV (Tablas 4, 6-13, A.4 y A.5)
 results/
-  VALIDATION_RESULTS.md           All GEE console outputs (Murray, RF, Sinú, Alto Madre de Dios)
-  panel_*.png                     Result maps used as figures in the article (Murray/Sinú/Madre de Dios)
+  VALIDATION_RESULTS.md      Registro original de las salidas de consola de Earth Engine (en inglés)
+  panel_*.jpg                Paneles cartográficos de Murray–Darling, el Sinú y el Alto Madre de Dios
+benchmark/                   Valores de referencia del CSIRO (Smith et al., 2025) y enlaces a sus datos
+data/mdb_boundary/           Límite oficial de Murray–Darling (instrucciones de carga en Earth Engine)
+docs/
+  correspondencia_tesis.md   Epígrafe o tabla de la tesis → script → archivo de datos
+  diccionario_datos.md       Descripción de cada archivo y de cada campo
+  reproducibilidad.md        Parámetros, semillas, registro de ejecuciones y limitaciones
+  limite_murray_darling.md   Descarga y carga del límite oficial de Murray–Darling
+  benchmark_csiro.md         Benchmark estructural del CSIRO (en español)
+python_pipeline/             Implementación en Python con datos SINTÉTICOS (véase python_pipeline/LEEME.md)
 ```
 
-## Earth Engine assets required
-- `projects/seea-ai/assets/mdb_boundary`  (official MDBA perimeter — see data/mdb_boundary)
-- Sinú AOI is derived in-script from HydroSHEDS `MAIN_BAS` (no upload needed).
-- Alto Madre de Dios AOI is derived in-script from HydroSHEDS `hybas_8` via
-  Pfafstetter-code (`PFAF_ID`) prefix match (no upload needed) — required because
-  Madre de Dios is an Amazon tributary, so the simpler `MAIN_BAS` grouping used
-  for the standalone Sinú basin would instead select the entire upstream Amazon
-  drainage network. See the `FIX` comments at the top of
-  `validation_madre_de_dios.js` and `rf_biomass_mdb_to_madrededios.js`.
+Los archivos en inglés (`results/VALIDATION_RESULTS.md`, `benchmark/`, `python_pipeline/README.md`, `README_REPRODUCIBILITY.md`) proceden del repositorio de trabajo original y se conservan como registro. Su equivalente en español está en `docs/` y en `datos/`.
 
-## How to verify the calculations
-1. Open each `gee/*.js` in the Earth Engine Code Editor and Run.
-2. Compare console outputs with `results/VALIDATION_RESULTS.md`.
-3. Compare per-unit values with `benchmark/BENCHMARK.md` (Smith et al., 2025) and,
-   for the underlying CSIRO data, the DOIs in `benchmark/CSIRO_DATA_LINKS.md`.
-   (Smith et al. 2025 is the reference/calibration basin only; Sinú and Alto
-   Madre de Dios are independent application basins with no external
-   published benchmark — they are cross-verified internally via Landsat,
-   Hansen, RADD and MODIS, as detailed in `VALIDATION_RESULTS.md`.)
+## Las tres cuencas
 
-## Key validated results
-Random-Forest biomass model: **R² = 0.77, RMSE = 13.2 tC/ha** (held-out test,
-NASA/ORNL labels), unchanged across both transfer targets (Sinú and Alto Madre
-de Dios). EO carbon sequestration **12.6 vs 9.9 tCO₂/ha·yr** (Smith 2025),
-cross-verified by Landsat (Δ −0.048), Hansen and MODIS.
+| Cuenca | País | Papel en la tesis | Periodo | Delimitación |
+|---|---|---|---|---|
+| Murray–Darling | Australia | Banco de pruebas y benchmark estructural (cuentas SEEA-EA del CSIRO) | 2018-19 | Límite oficial de la MDBA (Water Act 2007) |
+| Río Sinú | Colombia | Caso de uso principal | 2020–2024 | HydroSHEDS `hybas_7`, `MAIN_BAS` |
+| Alto Madre de Dios | Perú | Segunda aplicación tropical | 2020–2024 | HydroSHEDS `hybas_8`, prefijo Pfafstetter de 7 dígitos |
 
-- **Sinú** (14,065 km²): net basin greening (ΔC +11.2%), 14,580 ha Hansen loss,
-  localized carbon-stock loss ≈47 M USD (sensitivity 32–66 M USD).
-- **Alto Madre de Dios** (35,183 km²): 57,141 ha Hansen loss, 148,930 ha RADD
-  alerts concentrated in the mining corridor, ΔAGB +4.3 tCO₂/ha basin-wide,
-  localized carbon-stock loss ≈586 M USD (sensitivity 446–737 M USD).
+## Resultados principales
 
-License: MIT (code) / CC-BY for cited CSIRO & MDBA data.
+| Resultado | Valor | Archivo |
+|---|---|---|
+| Ajuste del Random Forest en Murray–Darling | R² = 0,77; RMSE = 13,2 tC/ha | `datos/resultados_gee/random_forest_metricas.csv` |
+| Validación cruzada por bloques de 1° | R² = 0,76 | `datos/resultados_gee/validacion_cruzada_bloques.csv` |
+| Pérdida forestal 2020–2024 | Sinú: 14.580 ha. Alto Madre de Dios: 57.141 ha | `sinu_indicadores.csv`, `madre_de_dios_indicadores.csv` |
+| Exposición bruta del stock de carbono (escenario base) | Sinú: 47,4 M USD (32,1–65,6). Alto Madre de Dios: 585,7 M USD (446–737) | `datos/tablas_tesis/tabla_8.csv`, `tabla_A_5.csv` |
+| Comparación con ESA CCI y GEDI (configuración de la tesis) | densidades entre un 3 % y un 21 % por debajo de ambos productos | `comparacion_productos_referencia.csv` |
+| Prueba con cuenca retenida | el modelo no se transfiere sin recalibración | `comparacion_productos_referencia.csv` (configuración C) |
+| Sensibilidad a la etiqueta de 2020 | densidades entre un 14 % y un 26 % más altas; las exposiciones siguen dentro de los rangos | `sensibilidad_etiqueta_2020.csv` |
+
+Las magnitudes monetarias son **escenarios de exposición bruta del stock de carbono**. Dependen de la densidad de carbono, del precio de referencia (20–30 USD/tCO₂) y de la fracción de liberación. No son cuentas oficiales ni valores de activo.
+
+## Cómo reproducir
+
+**Cálculos derivados (sin Earth Engine):** `python calculos/verificar_cifras_tesis.py` recalcula todas las exposiciones monetarias, los contrastes con el IDEAM y con Asner et al. (2010), la sensibilidad a la etiqueta y las conversiones de unidades, y comprueba que coinciden con la tesis.
+
+**Resultados de teledetección:**
+
+1. Abra el [Code Editor de Google Earth Engine](https://code.earthengine.google.com) con una cuenta y un proyecto en la nube.
+2. Cargue el límite de Murray–Darling como activo (`docs/limite_murray_darling.md`). Si la ruta resultante es distinta, cambie `projects/seea-ai/assets/mdb_boundary` en los scripts.
+3. Ejecute el script de `gee/` que corresponda y compare la salida de la consola con los CSV de `datos/resultados_gee/`.
+
+Los parámetros, las semillas, las ventanas temporales y las diferencias esperables al reejecutar están en `docs/reproducibilidad.md`.
+
+## Licencias
+
+- **Código** (`gee/` y `python_pipeline/`): MIT (`LICENSE`).
+- **Datos de resultados, tablas y paneles** elaborados en la tesis: CC BY 4.0 (`LICENCIA_DATOS.md`).
+- **Productos de origen** (Sentinel-2, Landsat, ESA CCI, GEDI, Hansen GFC, etc.): conservan sus propias licencias. Véase `datos/fuentes_datos.csv`.
+
+## Cómo citar
+
+Vilar Ramírez, I. (2026). *Contabilizar lo invisible: SEEA-AI, una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial* [Tesis doctoral]. Universitat Internacional de Catalunya. Código y datos: https://github.com/ivilaruic/tesis-seea-ai (véase `CITATION.cff`).

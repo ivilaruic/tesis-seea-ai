@@ -1,27 +1,23 @@
 cff-version: 1.2.0
-title: "SEEA-AI: An integrated Earth-observation and machine-learning architecture for ecosystem-condition accounting and carbon-stock exposure"
-message: "If you use this repository, please cite the article and this software."
+message: "Si utiliza este código o estos datos, cite la tesis doctoral."
+title: "Contabilizar lo invisible: SEEA-AI, una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial — código y datos de la tesis doctoral"
 type: software
 authors:
-  - family-names: Vilar Ramírez
-    given-names: Ivan
-  - family-names: González
-    given-names: María Fernanda
-  - family-names: Bastons Prat
-    given-names: Miquel
-repository-code: "https://github.com/ivilaruic/SEEA_AI"
+  - family-names: "Vilar Ramírez"
+    given-names: "Ivan"
+    affiliation: "Universitat Internacional de Catalunya"
+version: "1.0-deposito"
 license: MIT
-version: 1.1.0
-date-released: 2026-08-16
+repository-code: "https://github.com/ivilaruic/tesis-seea-ai"
+keywords: [capital natural, SEEA-EA, observación de la Tierra, inteligencia artificial, contabilidad ambiental, carbono]
 preferred-citation:
-  type: article
-  title: "SEEA-AI: An integrated Earth-observation and machine-learning architecture for ecosystem-condition accounting and carbon-stock exposure"
+  type: thesis
+  thesis-type: "Tesis doctoral"
+  title: "Contabilizar lo invisible: SEEA-AI, una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial"
   authors:
-    - family-names: Vilar Ramírez
-      given-names: Ivan
-    - family-names: González
-      given-names: María Fernanda
-    - family-names: Bastons Prat
-      given-names: Miquel
-  journal: "Ecosystem Services (submitted)"
+    - family-names: "Vilar Ramírez"
+      given-names: "Ivan"
+  institution:
+    name: "Universitat Internacional de Catalunya"
   year: 2026
+  languages: ["es"]
