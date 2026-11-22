@@ -1,5 +1,5 @@
 // =====================================================================
-// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// TESIS DOCTORAL · SEEA-AI · Ivan Vilar Ramírez
 // Script: sinu_change_2020_2024.js
 // Qué hace: Río Sinú: análisis de cambio 2020-2024 (variaciones de NDVI/NBR, Hansen, RADD, MODIS).
 // Dónde se usa en la tesis: Epígrafe 5.2.4; Tabla 7

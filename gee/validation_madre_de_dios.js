@@ -1,8 +1,8 @@
 // =====================================================================
-// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// TESIS DOCTORAL · SEEA-AI · Ivan Vilar Ramírez
 // Script: validation_madre_de_dios.js
 // Qué hace: Alto Madre de Dios 2020-2024: cuenta completa (área por prefijo Pfafstetter en hybas_8).
-// Dónde se usa en la tesis: Epígrafe 5.2.4.3; Tabla 10; Anexo IV; datos/resultados_gee/madre_de_dios_indicadores.csv
+// Dónde se usa en la tesis: Epígrafe 5.2.4.3; Tabla 10; Anexo I; datos/resultados_gee/madre_de_dios_indicadores.csv
 // Ejecución: Google Earth Engine Code Editor (code.earthengine.google.com).
 // Activo requerido: projects/seea-ai/assets/mdb_boundary (véase docs/limite_murray_darling.md).
 // Los comentarios internos del código pueden estar en inglés (versión de trabajo original).

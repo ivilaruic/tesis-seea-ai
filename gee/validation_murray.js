@@ -1,5 +1,5 @@
 // =====================================================================
-// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// TESIS DOCTORAL · SEEA-AI · Ivan Vilar Ramírez
 // Script: validation_murray.js
 // Qué hace: Murray–Darling 2018-19: indicadores de extensión, condición y flujos frente al benchmark SEEA-EA del CSIRO (Smith et al., 2025).
 // Dónde se usa en la tesis: Epígrafes 5.1 y 5.2.6; Tabla 9; datos/resultados_gee/murray_darling_indicadores.csv

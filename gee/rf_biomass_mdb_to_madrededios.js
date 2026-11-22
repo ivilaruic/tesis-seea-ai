@@ -1,8 +1,8 @@
 // =====================================================================
-// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// TESIS DOCTORAL · SEEA-AI · Ivan Vilar Ramírez
 // Script: rf_biomass_mdb_to_madrededios.js
 // Qué hace: Random Forest de biomasa: entrenamiento en Murray–Darling y aplicación al Alto Madre de Dios. ADD_MDD_TRAINING = true reproduce la configuración B de la tesis.
-// Dónde se usa en la tesis: Epígrafe 5.2.4.3; Anexo IV (Tabla A.5); datos/resultados_gee/random_forest_metricas.csv
+// Dónde se usa en la tesis: Epígrafe 5.2.4.3; Anexo I (Tabla A.2); datos/resultados_gee/random_forest_metricas.csv
 // Ejecución: Google Earth Engine Code Editor (code.earthengine.google.com).
 // Activo requerido: projects/seea-ai/assets/mdb_boundary (véase docs/limite_murray_darling.md).
 // Los comentarios internos del código pueden estar en inglés (versión de trabajo original).

@@ -1,5 +1,5 @@
 // =====================================================================
-// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// TESIS DOCTORAL · SEEA-AI · Ivan Vilar Ramírez
 // Script: validation_tropical_ind.js
 // Qué hace: Comparación de la densidad de carbono del Random Forest con ESA CCI Biomass v6.0 (2020) y GEDI L4B v2; configuraciones A, B y C (cuenca retenida); densidad en píxeles de pérdida 2021-2024.
 // Dónde se usa en la tesis: Epígrafe 5.2.4.6; Tabla 11; datos/resultados_gee/comparacion_productos_referencia.csv y densidad_pixeles_perdidos.csv

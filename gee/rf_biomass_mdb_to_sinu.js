@@ -1,5 +1,5 @@
 // =====================================================================
-// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// TESIS DOCTORAL · SEEA-AI · Ivan Vilar Ramírez
 // Script: rf_biomass_mdb_to_sinu.js
 // Qué hace: Random Forest de biomasa (etiqueta NASA/ORNL 2010): entrenamiento en Murray–Darling y aplicación al Sinú. ADD_SINU_TRAINING = true reproduce la configuración B de la tesis.
 // Dónde se usa en la tesis: Epígrafes 4.3.4.1, 5.2.3.1 y 5.2.4; Tabla 8; datos/resultados_gee/random_forest_metricas.csv

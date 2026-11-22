@@ -1,5 +1,5 @@
 // =====================================================================
-// TESIS DOCTORAL · Contabilizar lo invisible (SEEA-AI) · Ivan Vilar Ramírez
+// TESIS DOCTORAL · SEEA-AI · Ivan Vilar Ramírez
 // Script: validation_blocks_label2020.js
 // Qué hace: Validación cruzada de cinco pliegues (aleatoria y por bloques espaciales) y sensibilidad a la etiqueta ESA CCI 2020.
 // Dónde se usa en la tesis: Epígrafe 5.2.4.7; Tabla 12; datos/resultados_gee/validacion_cruzada_bloques.csv y sensibilidad_etiqueta_2020.csv
