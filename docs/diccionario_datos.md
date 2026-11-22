@@ -39,4 +39,4 @@ Todos los CSV están codificados en UTF-8 y usan la coma como separador.
 Cada archivo `tabla_N.csv` reproduce la tabla N de la tesis. La primera fila contiene los encabezados de columna; las celdas vacías corresponden a celdas combinadas o en blanco en la tesis.
 - **Tablas 4 y 6:** notación y correspondencia operativa.
 - **Tablas 7–13:** resultados y comparaciones.
-- **Tablas A.4 y A.5 (Anexo IV):** cuentas paralelas y sensibilidad del Alto Madre de Dios.
+- **Tablas A.1 y A.2 (Anexo I):** cuentas paralelas y sensibilidad del Alto Madre de Dios.

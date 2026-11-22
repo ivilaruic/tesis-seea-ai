@@ -18,11 +18,15 @@ Para cada resultado cuantitativo de la tesis se indica:
 | 5.2.4.6, Tabla 11 | Comparación con ESA CCI y GEDI L4B; configuraciones A, B y C; densidad en píxeles perdidos | `validation_tropical_ind.js` | `datos/resultados_gee/comparacion_productos_referencia.csv`, `densidad_pixeles_perdidos.csv`, `datos/tablas_tesis/tabla_11.csv` |
 | 5.2.4.7, Tabla 12 | Validación cruzada aleatoria y por bloques; sensibilidad a la etiqueta ESA CCI 2020 | `validation_blocks_label2020.js` | `datos/resultados_gee/validacion_cruzada_bloques.csv`, `sensibilidad_etiqueta_2020.csv`, `datos/tablas_tesis/tabla_12.csv` |
 | 5.2.6.3, Tabla 13 | Comparación descriptiva con implementaciones nacionales | — | `datos/tablas_tesis/tabla_13.csv` |
-| Anexo IV, Tabla A.4 | Cuentas SEEA-AI paralelas del Sinú y del Alto Madre de Dios | `validation_sinu.js`, `validation_madre_de_dios.js`, scripts RF | `datos/tablas_tesis/tabla_A_4.csv` |
-| Anexo IV, Tabla A.5 | Sensibilidad de la exposición en el Alto Madre de Dios (446–737 M USD) | `rf_biomass_mdb_to_madrededios.js` | `datos/tablas_tesis/tabla_A_5.csv` |
-| Figuras de los capítulos 5 y del Anexo IV | Paneles de condición, perturbación y biomasa | scripts de cada cuenca | `results/` (paneles .jpg) |
+| Anexo I, Tabla A.1 | Cuentas SEEA-AI paralelas del Sinú y del Alto Madre de Dios | `validation_sinu.js`, `validation_madre_de_dios.js`, scripts RF | `datos/tablas_tesis/tabla_A_1.csv` |
+| Anexo I, Tabla A.2 | Sensibilidad de la exposición en el Alto Madre de Dios (446–737 M USD) | `rf_biomass_mdb_to_madrededios.js` | `datos/tablas_tesis/tabla_A_2.csv` |
+| Figura 2 (5.2.4) | Condición en Murray–Darling 2018-19 | `validation_murray.js` | `results/panel_murray_s2_condition.jpg` |
+| Figuras 3, 4 y 5 (5.2.4) | Sinú: condición, perturbaciones Hansen/RADD y biomasa con su variación | `validation_sinu.js`, `rf_biomass_mdb_to_sinu.js` | `results/panel_sinu_*.jpg` |
+| Figuras 6 y 7 (5.2.4.3) y A.1–A.3 (Anexo I) | Alto Madre de Dios: condición, perturbaciones y biomasa | `validation_madre_de_dios.js`, `rf_biomass_mdb_to_madrededios.js` | `results/panel_madrededios_*.jpg` |
+| Figura 8 (5.2.4.6) | Sesgo y R² frente a ESA CCI y GEDI por configuración | `calculos/figuras_tesis.py` | `results/fig8_comparacion_referencias.png` (a partir de `comparacion_productos_referencia.csv`) |
+| Figura 9 (5.2.4.7) | Exposiciones alternativas frente a los rangos de escenarios | `calculos/figuras_tesis.py` | `results/fig9_exposicion_contrastes.png` (a partir de `densidad_pixeles_perdidos.csv` y `sensibilidad_etiqueta_2020.csv`) |
 
-| Todas las cifras derivadas (Tablas 8 y A.5, 5.2.4.5, 5.2.4.6, 5.2.4.7, conversiones) | Recalculadas y comprobadas: 41/41 | `calculos/verificar_cifras_tesis.py` | `calculos/verificacion_cifras.csv` |
+| Todas las cifras derivadas (Tablas 8 y A.2, 5.2.4.5, 5.2.4.6, 5.2.4.7, conversiones) | Recalculadas y comprobadas: 41/41 | `calculos/verificar_cifras_tesis.py` | `calculos/verificacion_cifras.csv` |
 
 ## Configuraciones del módulo de biomasa
 - **A (transferencia pura):** entrenado solo con muestras de Murray–Darling.
