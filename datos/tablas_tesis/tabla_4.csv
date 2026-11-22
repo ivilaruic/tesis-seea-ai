@@ -1,6 +1,6 @@
 Símbolo,Definición,Unidad/dominio,Estatus,Fuente/implementación
 "A_{i,t}",Extensión de la unidad espacial i,ha,Observado/derivado,Cobertura y píxel
-"C_{i,t}",Índice de condición,"[0,1]",Construido,"NDVI, referencia y controles"
+"C_{i,t}",Indicador de condición (índice C),"[0,1]",Construido,"NDVI, referencia y controles"
 E_t,Extensión ponderada por condición,ha equivalentes,Implementado como indicador físico,ΣAφ(C)
 "B̂_{i,t}",Biomasa aérea de carbono estimada,tC/ha,Modelo ML evaluado por píxel,Random Forest f_ψ(X)
 "S_{k,i,t}",Flujo físico del servicio k,Unidad física/periodo,Dependiente del servicio,"g_k(B̂,C,W)"

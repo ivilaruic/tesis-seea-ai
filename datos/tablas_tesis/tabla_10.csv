@@ -1,9 +1,9 @@
 Indicador,2020,2024,Fuente
 NDVI,"0,773","0,792",Sentinel-2
-Índice de condición,"0,904","0,926","Sentinel-2 (ref. L = 0,05; H = 0,85)"
+Indicador C (verdor),"0,904","0,926","Sentinel-2 (ref. L = 0,05; H = 0,85)"
 Biomasa aérea de carbono (tCO₂/ha),"409,8","414,0",Random Forest
 NDVI (verificación),—,"0,813",Landsat 8
-Pérdida de bosque (ha),—,57.141,Hansen GFC
-Alertas de deforestación (ha),—,148.930,RADD/GFW
+Pérdida de cubierta arbórea (ha),—,57.141,Hansen GFC
+Alertas de perturbación forestal (ha),—,148.930,RADD/GFW
 Área quemada (ha),—,2.757,MODIS
-Pérdida por minería (ha),—,1.371,Hansen SWIR/NDVI
+Pérdida con firma espectral minera probable (ha),—,1.371,Hansen SWIR/NDVI

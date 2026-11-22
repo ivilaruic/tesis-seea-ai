@@ -2,7 +2,7 @@ Indicador IA / EO,Variable biofísica estimada,Cuenta SEEA-EA asociada,Uso econ�
 Clasificación de cobertura del suelo,Extensión del ecosistema,Cuenta de extensión,Delimita el stock físico del activo natural
 NDVI / GNDVI / EVI,Proxy unidimensional de verdor/vegetación,Insumo potencial para indicadores de condición; no cuenta completa,Describe cambio relativo bajo referencias asumidas
 Biomasa aérea estimada (Random Forest),Carbono almacenado,Información física de carbono de biomasa aérea,Insumo para escenarios de exposición del carbono
-"Detección de deforestación (Hansen, RADD)",Pérdida de cobertura forestal,Indicador de perturbación; requiere reconciliación espacial,Localiza pérdidas cartografiadas; no atribuye causalidad
-Área quemada (MODIS),Perturbación ecosistémica,Cuenta de condición,Identifica área quemada según el producto MODIS
+"Pérdida de cubierta arbórea y alertas de perturbación (Hansen, RADD)",Pérdida de cubierta arbórea; perturbación,Indicador de perturbación; requiere reconciliación espacial,Localiza pérdidas cartografiadas; no atribuye causalidad
+Área quemada (MODIS),Perturbación ecosistémica,Insumo potencial para indicadores de condición (perturbación); no cuenta completa,Identifica área quemada según el producto MODIS
 Valor monetario del servicio,Valor económico del flujo,"Escenario monetario, no cuenta oficial",Aplica precios supuestos a una magnitud física
 Valor presente de servicios futuros,Valor del activo ecosistémico,Extensión conceptual no estimada,"Requiere flujos, horizonte y descuento validados"
