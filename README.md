@@ -1,6 +1,6 @@
-# Contabilizar lo invisible: SEEA-AI — repositorio de la tesis doctoral
+# SEEA-AI — repositorio de la tesis doctoral
 
-**Tesis doctoral:** *Contabilizar lo invisible: SEEA-AI, una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial.*
+**Tesis doctoral:** *SEEA-AI: una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial.*
 **Autor:** Ivan Vilar Ramírez
 **Programa:** Doctorado en Economía y Derecho, Universitat Internacional de Catalunya (UIC Barcelona)
 **Dirección:** Dr. Miquel Bastons Prat (director) y Dra. María Fernanda González Gutiérrez (codirectora)
@@ -33,13 +33,15 @@ gee/                         Scripts de Google Earth Engine (JavaScript) que gen
 calculos/
   verificar_cifras_tesis.py  Recalcula las 41 cifras derivadas de la tesis (escenarios, contrastes, conversiones) y las compara con el texto
   verificacion_cifras.csv    Resultado de la verificación (41 de 41 coinciden)
+  figuras_tesis.py           Genera las Figuras 8 y 9 de la tesis a partir de los CSV
 datos/
   fuentes_datos.csv          Las 18 fuentes de datos: identificador, versión, resolución, periodo, uso y DOI
   resultados_gee/            Resultados numéricos de todas las ejecuciones (CSV)
-  tablas_tesis/              Tablas de datos de la tesis en CSV (Tablas 4, 6-13, A.4 y A.5)
+  tablas_tesis/              Tablas de datos de la tesis en CSV (Tablas 4, 6-13, A.1 y A.2)
 results/
   VALIDATION_RESULTS.md      Registro de las salidas de consola de Earth Engine, por cuenca
-  panel_*.jpg                Paneles cartográficos de Murray–Darling, el Sinú y el Alto Madre de Dios
+  panel_*.jpg                Paneles cartográficos de Murray–Darling, el Sinú y el Alto Madre de Dios (Figuras 2–7 y A.1–A.3)
+  fig8_*.png, fig9_*.png     Gráficos de validación y de exposiciones (Figuras 8 y 9)
 benchmark/                   Valores de referencia del CSIRO (Smith et al., 2025) y enlaces a sus datos
 data/mdb_boundary/           Límite oficial de Murray–Darling (instrucciones de carga en Earth Engine)
 docs/
@@ -68,7 +70,7 @@ Toda la documentación está en español. Algunos comentarios internos del códi
 | Ajuste del Random Forest en Murray–Darling | R² = 0,77; RMSE = 13,2 tC/ha | `datos/resultados_gee/random_forest_metricas.csv` |
 | Validación cruzada por bloques de 1° | R² = 0,76 | `datos/resultados_gee/validacion_cruzada_bloques.csv` |
 | Pérdida forestal 2020–2024 | Sinú: 14.580 ha. Alto Madre de Dios: 57.141 ha | `sinu_indicadores.csv`, `madre_de_dios_indicadores.csv` |
-| Exposición bruta del stock de carbono (escenario base) | Sinú: 47,4 M USD (32,1–65,6). Alto Madre de Dios: 585,7 M USD (446–737) | `datos/tablas_tesis/tabla_8.csv`, `tabla_A_5.csv` |
+| Exposición bruta del stock de carbono (escenario base) | Sinú: 47,4 M USD (32,1–65,6). Alto Madre de Dios: 585,7 M USD (446–737) | `datos/tablas_tesis/tabla_8.csv`, `tabla_A_2.csv` |
 | Comparación con ESA CCI y GEDI (configuración de la tesis) | densidades entre un 3 % y un 21 % por debajo de ambos productos | `comparacion_productos_referencia.csv` |
 | Prueba con cuenca retenida | el modelo no se transfiere sin recalibración | `comparacion_productos_referencia.csv` (configuración C) |
 | Sensibilidad a la etiqueta de 2020 | densidades entre un 14 % y un 26 % más altas; las exposiciones siguen dentro de los rangos | `sensibilidad_etiqueta_2020.csv` |
@@ -95,4 +97,4 @@ Los parámetros, las semillas, las ventanas temporales y las diferencias esperab
 
 ## Cómo citar
 
-Vilar Ramírez, I. (2026). *Contabilizar lo invisible: SEEA-AI, una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial* [Tesis doctoral]. Universitat Internacional de Catalunya. Código y datos: https://github.com/ivilaruic/tesis-seea-ai (véase `CITATION.cff`).
+Vilar Ramírez, I. (2026). *SEEA-AI: una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial* [Tesis doctoral]. Universitat Internacional de Catalunya. Código y datos: https://github.com/ivilaruic/tesis-seea-ai (véase `CITATION.cff`).

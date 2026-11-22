@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Si utiliza este código o estos datos, cite la tesis doctoral."
-title: "Contabilizar lo invisible: SEEA-AI, una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial — código y datos de la tesis doctoral"
+title: "SEEA-AI: una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial — código y datos de la tesis doctoral"
 type: software
 authors:
   - family-names: "Vilar Ramírez"
@@ -13,7 +13,7 @@ keywords: [capital natural, SEEA-EA, observación de la Tierra, inteligencia art
 preferred-citation:
   type: thesis
   thesis-type: "Tesis doctoral"
-  title: "Contabilizar lo invisible: SEEA-AI, una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial"
+  title: "SEEA-AI: una arquitectura económica para medir y valorar el capital natural con observación de la Tierra e inteligencia artificial"
   authors:
     - family-names: "Vilar Ramírez"
       given-names: "Ivan"
