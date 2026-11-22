@@ -49,6 +49,6 @@ for ax, (cu, d) in zip(axs, items.items()):
     ax.set_title(f"{cu}: rango de escenarios de la tesis {fmt(d['rng'][0])}–{fmt(d['rng'][1])} M USD (sombreado)", fontsize=10, loc='left', fontweight='bold', pad=8)
     lo = min(d['rng'][0], min(p[1] for p in pts)); hi = max(d['rng'][1], max(p[1] for p in pts))
     ax.set_xlim(lo - (hi - lo) * 0.12, hi + (hi - lo) * 0.12)
-axs[1].set_xlabel('Exposición bruta del stock de carbono (millones de USD; 25 USD/tCO₂; λ_R = 1)')
+axs[1].set_xlabel(r'Exposición bruta del stock de carbono (millones de USD; 25 USD/tCO₂; $\lambda_R$ = 1,00)')
 fig.tight_layout(); fig.savefig(os.path.join(OUT, 'fig9_exposicion_contrastes.png'), dpi=220); plt.close()
 print('Figuras 8 y 9 generadas en results/')
