@@ -22,12 +22,12 @@ Para cada resultado cuantitativo de la tesis se indica:
 | Anexo I, Tabla A.2 | Sensibilidad de la exposición en el Alto Madre de Dios (446–737 M USD) | `rf_biomass_mdb_to_madrededios.js` | `datos/tablas_tesis/tabla_A_2.csv` |
 | Figura 2 (5.2.4) | Condición en Murray–Darling 2018-19 | `validation_murray.js` | `results/panel_murray_s2_condition.jpg` |
 | Figuras 3, 4 y 5 (5.2.4) | Sinú: condición, perturbaciones Hansen/RADD y biomasa con su variación | `validation_sinu.js`, `rf_biomass_mdb_to_sinu.js` | `results/panel_sinu_*.jpg` |
-| Figuras 6 y 7 (5.2.4.3) y A.1–A.3 (Anexo I) | Alto Madre de Dios: condición, perturbaciones y biomasa | `validation_madre_de_dios.js`, `rf_biomass_mdb_to_madrededios.js` | `results/panel_madrededios_*.jpg` |
+| Figuras 6 y 7 (5.2.4.3) y A.1 (Anexo I) | Alto Madre de Dios: condición, perturbaciones y biomasa | `validation_madre_de_dios.js`, `rf_biomass_mdb_to_madrededios.js` | `results/panel_madrededios_*.jpg` |
 | Figura 8 (5.2.4.6) | Sesgo y R² frente a ESA CCI y GEDI por configuración | `calculos/figuras_tesis.py` | `results/fig8_comparacion_referencias.png` (a partir de `comparacion_productos_referencia.csv`) |
 | Figura 9 (5.2.4.7) | Exposiciones alternativas frente a los rangos de escenarios | `calculos/figuras_tesis.py` | `results/fig9_exposicion_contrastes.png` (a partir de `densidad_pixeles_perdidos.csv` y `sensibilidad_etiqueta_2020.csv`) |
 
-| Todas las cifras derivadas (Tablas 8 y A.2, 5.2.4.5, 5.2.4.6, 5.2.4.7, 5.2.5.5, conversiones) | Recalculadas y comprobadas: 53/53 | `calculos/verificar_cifras_tesis.py` | `calculos/verificacion_cifras.csv` |
-| 5.2.5.5 Lectura económica: depreciación anual del capital natural frente al PIB (Sinú 0,16 % del PIB de Córdoba; Alto Madre de Dios ≈16 % del PIB de Madre de Dios) | Comprobaciones D1–D12 con el PIB oficial (DANE, BCRP) y los tipos de cambio medios | `calculos/verificar_cifras_tesis.py`, `datos/fuentes_datos.csv` | `calculos/verificacion_cifras.csv` |
+| Todas las cifras derivadas (Tablas 8 y A.2, 5.2.4.5, 5.2.4.6, 5.2.4.7, 5.2.5.5, conversiones) | Recalculadas y comprobadas: 59/59 | `calculos/verificar_cifras_tesis.py` | `calculos/verificacion_cifras.csv` |
+| 5.2.5.5 Lectura económica: pérdida anual de valor del activo natural frente al PIB, repartida en las cinco capas anuales de pérdida 2020–2024 (Sinú 0,12 % del PIB de Córdoba; Alto Madre de Dios ≈13 % del PIB de Madre de Dios; variantes con λ_R, Asner et al., RADD y coste social del carbono) | Comprobaciones D1–D18 con el PIB oficial (DANE, BCRP) y los tipos de cambio medios | `calculos/verificar_cifras_tesis.py`, `datos/fuentes_datos.csv` | `calculos/verificacion_cifras.csv` |
 
 ## Configuraciones del módulo de biomasa
 - **A (transferencia pura):** entrenado solo con muestras de Murray–Darling.

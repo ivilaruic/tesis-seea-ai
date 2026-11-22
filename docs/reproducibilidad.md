@@ -23,7 +23,7 @@
 
 ## Diferencias esperables al reejecutar
 - **Escala de agregación.** Las medias de cuenca de la tesis se calcularon a 500 m y algunas validaciones a 1 km. Por ejemplo, el Sinú da ≈132 tCO₂/ha a 500 m y 128,2 a 1 km.
-- **Aleatoriedad.** El Random Forest de Earth Engine puede variar ligeramente entre ejecuciones y versiones de la plataforma, en el orden de unidades de tCO₂/ha en las medias de cuenca.
+- **Variación entre ejecuciones.** El Random Forest de Earth Engine (`smileRandomForest`) usa semillas fijas, de modo que, con los mismos datos, el modelo es determinista. Las diferencias observadas entre ejecuciones —del orden de unidades de tCO₂/ha en las medias de cuenca, y de unos cientos de píxeles válidos en las muestras (por ejemplo, n = 2.997 frente a 2.764 en Murray–Darling)— proceden de la actualización de las colecciones de origen (Sentinel-2 y Cloud Score+) y del muestreo aproximado de `sample`. Para una reproducción exacta haría falta archivar las tablas de muestras y los ráster de predicción con fecha y commit.
 - **Tiempo de cálculo.** Las tareas pesadas (por ejemplo, la sensibilidad a la etiqueta en el Alto Madre de Dios) pueden superar el tiempo interactivo. Si ocurre, deben ejecutarse por separado; hay una nota al principio de `validation_blocks_label2020.js`.
 
 ## Registro de ejecuciones de la validación
